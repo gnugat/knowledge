@@ -1,4 +1,4 @@
-knowledge
-=========
+# Knowledge
 
-A collection of links, articles and hopefully other informative documents
+A collection of links, articles and hopefully other informative documents.
+
