@@ -22,4 +22,4 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 4. create a branch from a remote one and track it: `git checkout -t origin/<branch-name>`;
 5. removing the remote branch: `git push origin :<branch-name>` (note the `:` before the branch name);
 6. removing a local branch: `git branch -d <branch-name>` (won't remove unmerged branches);
-7. removing branches that doesn't exist anymore on the repository: `git remote prune origin`.
+7. removing branches that doesn't exist anymore on the repository: `git fetch -p`.
