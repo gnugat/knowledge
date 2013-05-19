@@ -23,3 +23,13 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 5. removing the remote branch: `git push origin :<branch-name>` (note the `:` before the branch name);
 6. removing a local branch: `git branch -d <branch-name>` (won't remove unmerged branches);
 7. removing branches that doesn't exist anymore on the repository: `git fetch -p`.
+
+## Managing your tags
+
+1. list existing tags: `git tag`;
+2. create a new tag: `git tag -a <tag-name> -m '<message>'`;
+3. pushing the tag: `git push origin <tag-name>`;
+4. create an alias: `git tag <existing-tag-name> <new-tag-name>`;
+5. removing a remote tag: `git push origin :<tag-name>` (note the `:` before the tag name);
+6. removing a local tag: `git tag -d <tag-name>`;
+7. renaming a tag: create an alias and remove the old tag.
