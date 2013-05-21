@@ -16,13 +16,14 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 
 ## Managing your branches
 
-1. create a new branch and switch to it: `git checkout -b <branch-name>`;
-2. rename the current branch: `git branch -m <current-branch-name> <new-branch-name>`;
-3. pushing the branch and tracking it: `git push -u origin <branch-name>`;
-4. create a branch from a remote one and track it: `git checkout -t origin/<branch-name>`;
-5. removing the remote branch: `git push origin :<branch-name>` (note the `:` before the branch name);
-6. removing a local branch: `git branch -d <branch-name>` (won't remove unmerged branches);
-7. removing branches that doesn't exist anymore on the repository: `git fetch -p`.
+1. listing existing branches: `git branch -a`;
+2. create a new branch and switch to it: `git checkout -b <branch-name>`;
+3. rename the current branch: `git branch -m <current-branch-name> <new-branch-name>`;
+4. pushing the branch and tracking it: `git push -u origin <branch-name>`;
+5. create a branch from a remote one and track it: `git checkout -t origin/<branch-name>`;
+6. removing the remote branch: `git push origin :<branch-name>` (note the `:` before the branch name);
+7. removing a local branch: `git branch -d <branch-name>` (won't remove unmerged branches);
+8. removing branches that doesn't exist anymore on the repository: `git fetch -p`.
 
 ## Managing your tags
 
