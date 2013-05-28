@@ -17,7 +17,8 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 
 ## Managing your branches
 
-1. listing existing branches: `git branch -a`;
+1. listing local and remote existing branches,
+   with commit sha1 and comment and relationship with upstream branc (if any): `git branch -avv`;
 2. creating a new branch and switch to it: `git checkout -b <branch-name>`;
 3. renaming the current branch: `git branch -m <current-branch-name> <new-branch-name>`;
 4. pushing the branch and tracking it: `git push -u <remote> <branch-name>`;
