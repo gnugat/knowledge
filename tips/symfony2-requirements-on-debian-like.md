@@ -9,9 +9,12 @@ Version used:
 
 ### PHP
 
-    sudo apt-get install php5 php5-curl php5-intl php5-apc
+    sudo apt-get install php5 php5-curl php5-intl php-apc
     
-The List of Supported Timezones`intl` extension is required by the `Symfony/ICU` component.
+The following extenstions are required:
+
+* `intl` for the `Symfony/ICU` component;
+* `apc` to improve performances.
 
 The following options should be set:
 
