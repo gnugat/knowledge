@@ -10,6 +10,8 @@ Version used:
 ### PHP
 
     sudo apt-get install php5 php5-curl php5-intl
+    
+The `intl` extension is required by the `Symfony/ICU` component.
 
 ### Git as version control system
 
