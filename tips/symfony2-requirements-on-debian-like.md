@@ -9,9 +9,14 @@ Version used:
 
 ### PHP
 
-    sudo apt-get install php5 php5-curl php5-intl
+    sudo apt-get install php5 php5-curl php5-intl php5-apc
     
-The `intl` extension is required by the `Symfony/ICU` component.
+The List of Supported Timezones`intl` extension is required by the `Symfony/ICU` component.
+
+The following options should be set:
+
+* `short_open_tag` to `Off`;
+* `date.timezone`, see [the list of Supported Timezones](http://fr2.php.net/manual/en/timezones.php) for values.
 
 ### Git as version control system
 
