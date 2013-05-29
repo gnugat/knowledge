@@ -29,7 +29,7 @@ The following options should be set:
     sudo pear install PHP_CodeSniffer
     cd /usr/share/php/PHP/CodeSniffer/Standards
     sudo git clone git://github.com/opensky/Symfony2-coding-standard.git Symfony2
-    phpcs --config-set default_standard Symfony2
+    sudo phpcs --config-set default_standard Symfony2
 
 ### Git as version control system
 
