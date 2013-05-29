@@ -11,7 +11,7 @@ Version used:
 
     sudo apt-get install php5 php5-curl php5-intl php-apc
     
-The following extenstions are required:
+The following extensions are required:
 
 * `intl` for the `Symfony/ICU` component;
 * `apc` to improve performances.
@@ -20,6 +20,16 @@ The following options should be set:
 
 * `short_open_tag` to `Off`;
 * `date.timezone`, see [the list of Supported Timezones](http://fr2.php.net/manual/en/timezones.php) for values.
+
+#### PHPCS
+
+    sudo apt-get install php-pear
+    sudo pear channel-discover pear.phpunit.de
+    sudo pear install phpunit/PHPUnit
+    sudo pear install PHP_CodeSniffer
+    cd /usr/share/php/PHP/CodeSniffer/Standards
+    sudo git clone git://github.com/opensky/Symfony2-coding-standard.git Symfony2
+    phpcs --config-set default_standard Symfony2
 
 ### Git as version control system
 
