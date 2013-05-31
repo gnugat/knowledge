@@ -55,4 +55,10 @@ Stage and commit as you wish, and the use `git rebase --continue`. Example:
     git add lib/simplegit.rb
     git commit -m 'added blame'
     git rebase --continue
- 
+
+## Reorder commits
+
+1. selecting the commits: `git rebase -i HEAD~<number>`;
+2. change the order of the lines.
+
+Source: http://git-scm.com/book/en/Git-Tools-Rewriting-History#Reordering-Commits
