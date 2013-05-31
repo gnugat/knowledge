@@ -61,6 +61,8 @@ Stage and commit as you wish, and the use `git rebase --continue`. Example:
 1. selecting the commits: `git rebase -i HEAD~<number>`;
 2. marking the commits: change `edit` to `fixup`.
 
+Source: http://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits
+
 ## Reorder commits
 
 1. selecting the commits: `git rebase -i HEAD~<number>`;
