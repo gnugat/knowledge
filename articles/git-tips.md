@@ -56,6 +56,11 @@ Stage and commit as you wish, and the use `git rebase --continue`. Example:
     git commit -m 'added blame'
     git rebase --continue
 
+## Join last commits into the previous one
+
+1. selecting the commits: `git rebase -i HEAD~<number>`;
+2. marking the commits: change `edit` to `fixup`.
+
 ## Reorder commits
 
 1. selecting the commits: `git rebase -i HEAD~<number>`;
