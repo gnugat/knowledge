@@ -40,36 +40,25 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 
 ## Splitting a commit
 
-To split a commit into many ones, use `git rebase -i HEAD~<n>`
-(replace `<n>` with the number of commits between HEAD and yours, plus one),
-then when the editor pops, change `pick` by `edit` on the commit to split. Example:
-
-    pick f7f3f6d changed name a bit
-    edit 310154e updated README formatting and added blame
-    pick a5f4a0d added cat-file
-
-When dropped back to the console, use `git reset HEAD^` to undo the commit and leave its modifications unstaged.
-Stage and commit as you wish, and the use `git rebase --continue`. Example:
-
-    git reset HEAD^
-    git add README
-    git commit -m 'updated README formatting'
-    git add lib/simplegit.rb
-    git commit -m 'added blame'
-    git rebase --continue
+1. select the commits: `git rebase -i HEAD~<number>`;
+2. mark the commit: change `pick` to `edit`;
+3. save and quit the editor;
+4. undo the commit: `git reset HEAD^`;
+5. stage and commit: `git add <file>; git commit -m <message>;
+6. apply the split: `git rebase --continue`.
  
 Source: [Git scm: Splitting a commit](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Splitting-a-Commit)
 
 ## Join last commits into the previous one
 
-1. selecting the commits: `git rebase -i HEAD~<number>`;
-2. marking the commits: change `edit` to `fixup`.
+1. select the commits: `git rebase -i HEAD~<number>`;
+2. mark the commits: change `pick` to `fixup`.
 
 Source: [Git scm: Squashing commits](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits)
 
 ## Reorder commits
 
-1. selecting the commits: `git rebase -i HEAD~<number>`;
+1. select the commits: `git rebase -i HEAD~<number>`;
 2. change the order of the lines.
 
 Source: [Git scm: Reordering commits](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Reordering-Commits)
