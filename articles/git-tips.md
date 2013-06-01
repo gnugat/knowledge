@@ -56,18 +56,18 @@ Stage and commit as you wish, and the use `git rebase --continue`. Example:
     git commit -m 'added blame'
     git rebase --continue
  
-Source: http://git-scm.com/book/en/Git-Tools-Rewriting-History#Splitting-a-Commit
+Source: [Git scm: Splitting a commit](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Splitting-a-Commit)
 
 ## Join last commits into the previous one
 
 1. selecting the commits: `git rebase -i HEAD~<number>`;
 2. marking the commits: change `edit` to `fixup`.
 
-Source: http://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits
+Source: [Git scm: Squashing commits](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Squashing-Commits)
 
 ## Reorder commits
 
 1. selecting the commits: `git rebase -i HEAD~<number>`;
 2. change the order of the lines.
 
-Source: http://git-scm.com/book/en/Git-Tools-Rewriting-History#Reordering-Commits
+Source: [Git scm: Reordering commits](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Reordering-Commits)
