@@ -1,9 +1,11 @@
 # Git tips
 
-This article will provide some tips for using Git, using the following sources:
+Resources:
 
 * [genomewiki](http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git);
-* [Pro Git](http://git-scm.com/book).
+* [Git scm](http://git-scm.com/book);
+* [Justin Hileman](http://justinhileman.info/article/changing-history/);
+* [Daniel Kummer](http://danielkummer.github.io/git-flow-cheatsheet/).
 
 ## Solving merge conflicts
 
