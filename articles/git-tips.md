@@ -5,7 +5,8 @@ Resources:
 * [genomewiki](http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git);
 * [Git scm](http://git-scm.com/book);
 * [Justin Hileman](http://justinhileman.info/article/changing-history/);
-* [Daniel Kummer](http://danielkummer.github.io/git-flow-cheatsheet/).
+* [Daniel Kummer](http://danielkummer.github.io/git-flow-cheatsheet/);
+* [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html).
 
 ## Solving merge conflicts
 
