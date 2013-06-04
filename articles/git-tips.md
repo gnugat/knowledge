@@ -6,7 +6,8 @@ Resources:
 * [Git scm](http://git-scm.com/book);
 * [Justin Hileman](http://justinhileman.info/article/changing-history/);
 * [Daniel Kummer](http://danielkummer.github.io/git-flow-cheatsheet/);
-* [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html).
+* [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html);
+* [Resources for learning Git](http://speckyboy.com/2013/06/03/resources-for-learning-git).
 
 ## Solving merge conflicts
 
