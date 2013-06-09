@@ -21,21 +21,6 @@ The following options should be set:
 * `short_open_tag` to `Off`;
 * `date.timezone`, see [the list of Supported Timezones](http://fr2.php.net/manual/en/timezones.php) for values.
 
-#### PHPCS
-
-    sudo apt-get install php-pear
-    sudo pear channel-discover pear.phpunit.de
-    sudo pear install phpunit/PHPUnit
-    sudo pear install PHP_CodeSniffer
-    cd /usr/share/php/PHP/CodeSniffer/Standards
-    sudo git clone git://github.com/opensky/Symfony2-coding-standard.git Symfony2
-    sudo phpcs --config-set default_standard Symfony2
-
-##### PHP-CS-Fixer
-
-    sudo curl http://cs.sensiolabs.org/get/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
-    sudo chmod +x /usr/local/bin/php-cs-fixer
-
 ### Git as version control system
 
     sudo apt-get install git
@@ -109,3 +94,20 @@ Download the last version of [node.js sources](http://nodejs.org/download/) and 
 
     sudo npm install -g uglify-js@1
     sudo npm install -g uglifycss
+
+## Quality tools
+
+### PHPCS
+
+    sudo apt-get install php-pear
+    sudo pear channel-discover pear.phpunit.de
+    sudo pear install phpunit/PHPUnit
+    sudo pear install PHP_CodeSniffer
+    cd /usr/share/php/PHP/CodeSniffer/Standards
+    sudo git clone git://github.com/opensky/Symfony2-coding-standard.git Symfony2
+    sudo phpcs --config-set default_standard Symfony2
+
+#### PHP-CS-Fixer
+
+    sudo curl http://cs.sensiolabs.org/get/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
+    sudo chmod +x /usr/local/bin/php-cs-fixer
