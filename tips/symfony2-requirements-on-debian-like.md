@@ -31,6 +31,11 @@ The following options should be set:
     sudo git clone git://github.com/opensky/Symfony2-coding-standard.git Symfony2
     sudo phpcs --config-set default_standard Symfony2
 
+##### PHP-CS-Fixer
+
+    sudo curl http://cs.sensiolabs.org/get/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
+    sudo chmod +x /usr/local/bin/php-cs-fixer
+
 ### Git as version control system
 
     sudo apt-get install git
