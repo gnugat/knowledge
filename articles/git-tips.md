@@ -64,3 +64,15 @@ Source: [Git scm: Squashing commits](http://git-scm.com/book/en/Git-Tools-Rewrit
 2. change the order of the lines.
 
 Source: [Git scm: Reordering commits](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Reordering-Commits)
+
+## Commit part of a file
+
+1. select the file: `git add -p <file>`;
+2. choose what to do:
+   * accept the chunk: hit `y`;
+   * reject the chunk: hit `n`;
+   * select part of the chunk: hit `e`, or `s` if available.
+3. save and quit the editor;
+4. commit: `git commit -m <message>`.
+
+Source: [Git scm: Staging patches](http://git-scm.com/book/en/Git-Tools-Interactive-Staging#Staging-Patches)
