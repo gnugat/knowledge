@@ -98,6 +98,10 @@ and [UglifyCSS](https://github.com/fmarcia/UglifyCSS):
     sudo npm install -g uglify-js@1
     sudo npm install -g uglifycss
 
+### LESS compilation
+
+    sudo npm install -g less
+
 ## Quality tools
 
 ### PHPCS
