@@ -118,3 +118,10 @@ and [UglifyCSS](https://github.com/fmarcia/UglifyCSS):
 
     sudo curl http://cs.sensiolabs.org/get/php-cs-fixer.phar -o /usr/local/bin/php-cs-fixer
     sudo chmod +x /usr/local/bin/php-cs-fixer
+
+## Capifony as deployment tool
+
+Install [RubyGems](http://rubygems.org/) and then [Capifony](http://capifony.org/):
+
+    sudo apt-get install rubygems
+    sudo gem install capifony
