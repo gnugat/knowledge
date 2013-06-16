@@ -3,7 +3,7 @@
 Version used:
 
 * Ubuntu 13.04;
-* Symfony 2.2.
+* Symfony 2.2, 2.3.
 
 ## Minimum requirements
 
