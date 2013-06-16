@@ -78,7 +78,7 @@ Optionnaly:
 
     sudo apt-get install phpmyadmin
 
-## CSS/Javascript minification
+## Assets management
 
 Download the last version of [node.js sources](http://nodejs.org/download/) and install it:
 
@@ -90,7 +90,10 @@ Download the last version of [node.js sources](http://nodejs.org/download/) and 
     cd ..
     rm -rf node-v*
 
-### [UglifyJS](https://github.com/mishoo/UglifyJS) and [UglifyCSS](https://github.com/fmarcia/UglifyCSS)
+### Javascript and CSS minification
+
+Install [UglifyJS](https://github.com/mishoo/UglifyJS)
+and [UglifyCSS](https://github.com/fmarcia/UglifyCSS):
 
     sudo npm install -g uglify-js@1
     sudo npm install -g uglifycss
