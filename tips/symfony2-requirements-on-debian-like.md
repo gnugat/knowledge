@@ -38,11 +38,6 @@ Optionnaly:
 
     sudo apt-get install phpmyadmin
 
-### Apache as HTTP server
-
-    sudo apt-get install apache2
-    sudo a2enmod rewrite
-
 ### ACL for permissions
 
 First of all, install ACLs.
@@ -61,6 +56,11 @@ Now edit the file `/etc/fstab` to add `acl` to the options. Example:
 Finally, remount the `sda`:
 
     mount -a -o remount /dev/sdax
+
+### Apache as HTTP server
+
+    sudo apt-get install apache2
+    sudo a2enmod rewrite
 
 #### Changing Apache user and groups for permissions
 
