@@ -30,6 +30,14 @@ The following options should be set:
     curl -sS https://getcomposer.org/installer | php
     sudo mv composer.phar /usr/local/bin/composer
 
+### MySQL as database
+
+    sudo apt-get install mysql-client mysql-server
+
+Optionnaly:
+
+    sudo apt-get install phpmyadmin
+
 ### Apache as HTTP server
 
     sudo apt-get install apache2
@@ -69,14 +77,6 @@ In the following example, my user login is `gnugat` (so it will also be my group
 
 When restarting the Apache deamon (`/etc/init.d/apache2 restart`), it will run with your rights, which means it will
 be able to read and right in your directories (example: `/home/gnugat/symfony2-project`).
-
-### MySQL as database
-
-    sudo apt-get install mysql-client mysql-server
-
-Optionnaly:
-
-    sudo apt-get install phpmyadmin
 
 ## Assets management
 
