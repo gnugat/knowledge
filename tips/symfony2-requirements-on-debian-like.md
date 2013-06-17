@@ -57,12 +57,12 @@ Finally, remount the `sda`:
 
     mount -a -o remount /dev/sdax
 
-### Apache as HTTP server
+## Apache as HTTP server
 
     sudo apt-get install apache2
     sudo a2enmod rewrite
 
-#### Changing Apache user and groups for permissions
+### Changing Apache user and groups for permissions
 
 If for some reasons you can't enable ACLs and you have Apache, change the user and group of the HTTP server.
 By default, it should be `www-data`, change it to your user and group by editing the `/etc/apache/envvars` file.
