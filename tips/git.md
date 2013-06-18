@@ -7,7 +7,8 @@ Resources:
 * [Justin Hileman](http://justinhileman.info/article/changing-history/);
 * [Daniel Kummer](http://danielkummer.github.io/git-flow-cheatsheet/);
 * [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html);
-* [Resources for learning Git](http://speckyboy.com/2013/06/03/resources-for-learning-git).
+* [Resources for learning Git](http://speckyboy.com/2013/06/03/resources-for-learning-git);
+* [Git tips from the pros](http://net.tutsplus.com/tutorials/tools-and-tips/git-tips-from-the-pros/).
 
 ## Solving merge conflicts
 
