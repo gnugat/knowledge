@@ -47,7 +47,7 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 2. mark the commit: change `pick` to `edit`;
 3. save and quit the editor;
 4. undo the commit: `git reset HEAD^`;
-5. stage and commit: `git add <file>; git commit -m <message>;
+5. stage and commit: `git add <file>; git commit -m <message>`;
 6. apply the split: `git rebase --continue`.
  
 Source: [Git scm: Splitting a commit](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Splitting-a-Commit)
