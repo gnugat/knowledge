@@ -29,7 +29,8 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 5. creating a branch from a remote one and track it: `git checkout -t <remote>/<branch-name>`;
 6. removing the remote branch: `git push <remote> :<branch-name>` (note the `:` before the branch name);
 7. removing a local branch: `git branch -d <branch-name>` (won't remove unmerged branches);
-8. removing branches that doesn't exist anymore on the repository: `git fetch -p`.
+8. removing branches that doesn't exist anymore on the repository: `git fetch -p`;
+9. finding merged/unmerged branches: `git branch --merged; git banch --no-merged`.
 
 ## Managing your tags
 
