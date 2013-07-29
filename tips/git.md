@@ -68,6 +68,23 @@ Source: [Git scm: Squashing commits](http://git-scm.com/book/en/Git-Tools-Rewrit
 
 Source: [Git scm: Reordering commits](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Reordering-Commits)
 
+## Modify commit
+
+:warning: These tips work for un-propagated commits
+
+### Change the last commit message
+
+``git commit --amend``
+
+### Modify specific commit
+
+1. start rebase: `git rebase -i <number>^`
+2. mark the commit: change `pick` to `edit`
+3. edit your files
+4. add them `git add <filepattern>`
+5. `git commit --amend`
+6. And return to the head with `git rebase --continue`
+
 ## Commit part of a file
 
 1. select the file: `git add -p <file>`;
