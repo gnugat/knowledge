@@ -3,7 +3,7 @@
 Version used:
 
 * Ubuntu 13.04;
-* Symfony 2.2, 2.3.
+* Symfony ~2.2.
 
 ## Minimum requirements
 
@@ -18,6 +18,7 @@ The following extensions are required:
 
 The following options should be set:
 
+* `expose_php` to `Off`;
 * `short_open_tag` to `Off`;
 * `date.timezone`, see [the list of Supported Timezones](http://fr2.php.net/manual/en/timezones.php) for values.
 
@@ -61,6 +62,10 @@ Finally, remount the `sda`:
 
     sudo apt-get install apache2
     sudo a2enmod rewrite
+
+The following options should be set in `/etc/apache2/conf.d/security`:
+
+* `ServerTokens` to `Prod`.
 
 ### Changing Apache user and groups for permissions
 
