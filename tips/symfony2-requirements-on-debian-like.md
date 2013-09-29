@@ -9,6 +9,13 @@ Version used:
 
 ### PHP
 
+To avoid PHP bugs, the minimum versions are required:
+
+* 5.3.17 ([Reflection bug fixed](https://bugs.php.net/bug.php?id=62715))
+* 5.4.11 ([SessionHandlerInterfact bug fixed](https://bugs.php.net/bug.php?id=63379))
+
+Here are the packages to install:
+
     sudo apt-get install php5 php5-curl php5-intl php-apc
     
 The following extensions are required:
@@ -21,6 +28,10 @@ The following options should be set:
 * `expose_php` to `Off`;
 * `short_open_tag` to `Off`;
 * `date.timezone`, see [the list of Supported Timezones](http://fr2.php.net/manual/en/timezones.php) for values.
+
+Here are some links to install latest PHP versions on ubuntu:
+
+* 5.4: https://launchpad.net/~ondrej/+archive/php5-oldstable/+packages
 
 ### Git as version control system
 
