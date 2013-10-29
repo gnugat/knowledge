@@ -43,6 +43,13 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 6. removing a local tag: `git tag -d <tag-name>`;
 7. renaming a tag: create an alias and remove the old tag.
 
+## Managing ref updates (checkout, reset, commit, merge, etc)
+
+1. checking the history of ref updates: `git reflog [show <branch>]`;
+2. undoing last ref update: `git reset HEAD@{1}`.
+
+Source: [Stack overflow: Undoing git reset](http://stackoverflow.com/questions/2510276/undoing-git-reset)
+
 ## Splitting a commit
 
 1. select the commits: `git rebase -i HEAD~<number>`;
