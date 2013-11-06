@@ -17,7 +17,7 @@ To avoid PHP bugs, the minimum versions are required:
 Here are the packages to install:
 
     sudo apt-get install php5 php5-curl php5-intl php-apc
-    
+
 The following extensions are required:
 
 * `intl` for the `Symfony/ICU` component;
@@ -55,7 +55,7 @@ Optionnaly:
 First of all, install ACLs.
 
     sudo apt-get install acl
-    
+
 Then check which `sda` to edit. It should be the line ending with `Linux` (not `Linux swap / Solaris`):
 
     sudo fdisk -l | grep Linux

@@ -32,4 +32,3 @@ To solve it, simply install the `libicu44.deb` directly from
 Then the extension can be installed:
 
     sudo apt-get install php5-intl
-

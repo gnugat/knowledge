@@ -58,7 +58,7 @@ Source: [Stack overflow: Undoing git reset](http://stackoverflow.com/questions/2
 4. undo the commit: `git reset HEAD^`;
 5. stage and commit: `git add <file>; git commit -m <message>`;
 6. apply the split: `git rebase --continue`.
- 
+
 Source: [Git scm: Splitting a commit](http://git-scm.com/book/en/Git-Tools-Rewriting-History#Splitting-a-Commit)
 
 ## Join last commits into the previous one
