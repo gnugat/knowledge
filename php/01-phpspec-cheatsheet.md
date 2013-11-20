@@ -10,7 +10,7 @@ Links:
 
 ## Stub
 
-Specifies collaborators return value:
+Specifies collaborators return value. Used together with methods that return value:
 
     function it_can_be_assigned_tasks(Task $task)
     {
@@ -20,20 +20,21 @@ Specifies collaborators return value:
 
 ## Mock
 
-Checks if collaborators methods have been called
+Checks if collaborators methods have been called. Used together with methods that do not return value:
 
     function it_can_be_assigned_tasks(Task $task)
     {
-        $task->getCost()->shouldBeCalled();
-        $this->assignTask($task);
+        $task->changeCost(12)->shouldBeCalled();
+        $this->changeTaskCost($task, 12);
     }
 
 ## Setup and teardown
 
+    const RESTAURANT = 'Chli-Pou-Ni';
+
     function let(Food $food)
     {
-        $name = 'Chli-Pou-Ni';
-        $this->beConstructedWith($name, $food);
+        $this->beConstructedWith(self::RESTAURANT, $food);
     }
 
     function letGo()
@@ -66,9 +67,9 @@ Begin with `should` or `shouldNot`.
 
 ### Exception
 
-    $this->shouldThrow('\Exception')->duringMethod();
-    $this->shouldThrow('\Exception')->during('method', array());
-    $this->shouldThrow(new \Exception('message'))->during('method', array());
+    $this->shouldThrow('\Exception')->duringMethod($name);
+    $this->shouldThrow('\Exception')->during('method', array($name));
+    $this->shouldThrow(new \Exception('message'))->during('method', array($name));
 
 ### Type
 
@@ -99,7 +100,7 @@ Begin with `should` or `shouldNot`.
     public function getMatchers()
     {
         return [
-            'matcher' => function($subject, $key) {
+            'haveKey' => function($subject, $key) {
                 return array_key_exists($key, $subject);
             },
             'haveValue' => function($subject, $value) {
