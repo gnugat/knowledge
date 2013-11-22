@@ -1,5 +1,34 @@
 # MySQL and encoding issues
 
+## Check encoding definition
+
+For schemas:
+
+    SELECT default_character_set_name FROM information_schema.SCHEMATA S
+    WHERE schema_name = "<schema_name>";
+
+For Tables:
+
+    SELECT CCSA.character_set_name
+    FROM
+        information_schema.`TABLES` T,
+        information_schema.`COLLATION_CHARACTER_SET_APPLICABILITY` CCSA
+    WHERE
+        CCSA.collation_name = T.table_collation
+        AND T.table_schema = "<schema_name>"
+        AND T.table_name = "<table_name>";
+
+For Columns:
+
+    SELECT character_set_name
+    FROM information_schema.`COLUMNS` C
+    WHERE
+        table_schema = "<schema_name>"
+        AND table_name = "<table_name>"
+        AND column_name = "<column_name>";
+
+Source: [StackOverflow - How do I see what character set a database / table / column is in MySQL?](http://stackoverflow.com/questions/1049728/how-do-i-see-what-character-set-a-database-table-column-is-in-mysql)
+
 ## Check insertion with foreign encoding
 
     # Example of <expected_encoding>: utf8
@@ -27,7 +56,7 @@ Dumping when encoding is bad (e.g. latin1 inserted in utf8 columns):
 Importing:
 
     shell> mysql --user=<name> -p  --default-character-set=<expected-encoding> <database>
-    mysql> SOURCE <dump-file>
+    mysql> SOURCE <dump-file>;
 
 Source: [MakandraCards - Dumping and importing from/to MySQL in an UTF-8 safe way](http://makandracards.com/makandra/595-dumping-and-importing-from-to-mysql-in-an-utf-8-safe-way)
 
