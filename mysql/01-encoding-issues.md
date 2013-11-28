@@ -1,10 +1,35 @@
 # MySQL and encoding issues
 
+## Set default encoding in configuration
+
+    [mysqld]
+    ###
+    # Force encoding to utf-8:
+    # - ignore client information
+    # - interpret client's information as utf-8
+    # - utf-8 as default collation for the connection
+    # - utf-8 as default collation for the server
+    # - utf-8 as default character set for the server
+    ###
+    skip-character-set-client-handshake
+    init-connect='SET NAMES utf8'
+    init_connect='SET collation_connection = utf8_unicode_ci'
+    collation-server = utf8_unicode_ci
+    character-set-server = utf8
+
+Source: [StackOverflow - Should /etc/my.cnf be set to add character-set-server=utf8 and default-character-set=utf8?](http://stackoverflow.com/a/16831107)
+
 ## Check encoding definition
+
+For server's character set and collation:
+
+    SHOW VARIABLES LIKE 'char%';
+    SHOW VARIABLES LIKE 'collation%';
 
 For schemas:
 
-    SELECT default_character_set_name FROM information_schema.SCHEMATA S
+    SELECT default_character_set_name
+    FROM information_schema.SCHEMATA S
     WHERE schema_name = "<schema_name>";
 
 For Tables:
@@ -27,7 +52,10 @@ For Columns:
         AND table_name = "<table_name>"
         AND column_name = "<column_name>";
 
-Source: [StackOverflow - How do I see what character set a database / table / column is in MySQL?](http://stackoverflow.com/questions/1049728/how-do-i-see-what-character-set-a-database-table-column-is-in-mysql)
+Sources:
+
+* [StackOverflow - How do I see what character set a database / table / column is in MySQL?](http://stackoverflow.com/questions/1049728/how-do-i-see-what-character-set-a-database-table-column-is-in-mysql)
+* [StackOverflow - Change MySQL default character set to UTF8 in my.cnf?](http://stackoverflow.com/a/10866836)
 
 ## Check insertion with foreign encoding
 
