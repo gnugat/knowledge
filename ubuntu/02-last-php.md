@@ -1,3 +1,21 @@
+# Installing recent PHP on Ubuntu 13.04
+
+[Ondřej Surý](https://launchpad.net/~ondrej) provides recent versions of PHP for Ubuntu.
+
+Source: [Greg Rickaby - How to install LAMP on Ubuntu](http://gregrickaby.com/how-to-install-lamp-on-ubuntu/)
+
+## PHP 5.5
+
+    sudo add-apt-repository ppa:ondrej/php5
+    sudo apt-get update
+    sudo apt-get install php5
+
+## PHP 5.4
+
+    sudo add-apt-repository ppa:ondrej/php5-oldstable
+    sudo apt-get update
+    sudo apt-get install php5
+
 # Installing last PHP 5.3 on Ubuntu 12.04
 
 This article describes how to get the last PHP 5.3 version on Ubuntu 12.04,
