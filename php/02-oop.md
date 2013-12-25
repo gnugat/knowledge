@@ -2,6 +2,17 @@
 
 The OOP paradigm is the fact of using exclusively objects to solve a problem.
 
+Summary:
+
+1. [What is an object?](02-oop.md#what-is-an-object)
+2. [Relationship](02-oop.md#relationship)
+3. [What are the different kinds of objects](02-oop.md#what-are-the-different-kinds-of-objects)
+   * [Representers](02-oop.md#representers)
+   * [Doers](02-oop.md#doers)
+   * [Plumbers](02-oop.md#plumbers)
+   * [Translators](02-oop.md#translators)
+   * [Makers](02-oop.md#makers)
+
 ## What is an object?
 
 An object is a group of variables and functions, in order to define a behavior based on its data.
@@ -25,6 +36,7 @@ To initialize an object, a constructor must be defined.
 
 Example:
 
+```php
     <?php
     
     class User
@@ -55,6 +67,7 @@ Example:
 
     // Will cause a fatal error (Cannot access private property)
     echo $user->firstName;
+```
 
 ## Relationship
 
@@ -62,6 +75,7 @@ An object can own another one (or even a collection of another one), and it can 
 
 Example:
 
+```php
     <?php
     
     class User
@@ -95,11 +109,13 @@ Example:
             return $this->firstName.' '.$this->lastName;
         }
     }
+```
 
 ### Tips
 
 A private member can only be accessed by an instance of the object. Which means the following example is possible:
 
+```php
     <?php
     
     class User
@@ -126,6 +142,7 @@ A private member can only be accessed by an instance of the object. Which means 
             return $this->firstName.' '.$this->lastName;
         }
     }
+```
 
 This behavior is not unique to PHP, for example it is the same as
 [in C++](http://stackoverflow.com/questions/6921185/why-do-objects-of-the-same-class-have-access-to-each-others-private-data).
@@ -142,6 +159,7 @@ Its responsibility is to define the state of the data.
 
 Example:
 
+```php
     <?php
     
     class BlogPost
@@ -150,6 +168,7 @@ Example:
         public function getTitle() {}
         public function getContent() {}
     }
+```
 
 #### Tips
 
@@ -163,12 +182,14 @@ Its responsibility is to execute a task, often by manipulating a representer.
 
 Example:
 
+```php
     <?php
     
     class Logger
     {
         public function error($message) {}
     }
+```
 
 #### Tips
 
@@ -181,12 +202,14 @@ Its responsibility is to pass an input representer to a doer, and  then to retur
 
 Example:
 
+```php
     <?php
     
     class HttpKernel
     {
         public function handle(Request $request) {}
     }
+```
 
 #### Tips
 
@@ -204,6 +227,7 @@ Its responsibility is to take a representer and to transform it into another one
 
 Example:
 
+```php
     <?php
     
     class Yaml
@@ -211,6 +235,7 @@ Example:
         /** @return PHP array */
         public function parse($fileContent) {}
     }
+```
 
 #### Tips
 
@@ -226,6 +251,7 @@ Its responsibility is to create instances.
 
 Example:
 
+```php
     <?php
     
     class UserFactory
@@ -233,6 +259,7 @@ Example:
         /** @return an instance of User */
         public function make() {}
     }
+```
 
 #### Tips
 
