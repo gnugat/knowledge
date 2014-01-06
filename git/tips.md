@@ -102,12 +102,14 @@ Source: [Git scm: Reordering commits](http://git-scm.com/book/en/Git-Tools-Rewri
 3. save and quit the editor;
 4. commit: `git commit -m <message>`.
 
-## Get a branch without rebase or origin (full replacement)
-``git fetch <remote>``
-``git reset --hard <remote>/<branch>``
-
-You shouldn't have differences now between your local branch and remote branch:
-``git diff <branch>...<remote><branch>`` should respond nothing.
-
-
 Source: [Git scm: Staging patches](http://git-scm.com/book/en/Git-Tools-Interactive-Staging#Staging-Patches)
+
+## Reset a local branch from remote branch
+
+1. start fetch: ``git fetch <remote>``
+2. reset from the chosen remote: ``git reset --hard <remote>/<branch>``
+3. check you have no differences between the two branches: ``git diff <branch>...<remote><branch>`` should respond nothing.
+
+Source: [Git scm: Reset history](http://git-scm.com/docs/git-reset)
+
+
