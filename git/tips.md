@@ -103,3 +103,13 @@ Source: [Git scm: Reordering commits](http://git-scm.com/book/en/Git-Tools-Rewri
 4. commit: `git commit -m <message>`.
 
 Source: [Git scm: Staging patches](http://git-scm.com/book/en/Git-Tools-Interactive-Staging#Staging-Patches)
+
+## Reset a local branch from remote branch
+
+1. start fetch: ``git fetch <remote>``
+2. reset from the chosen remote: ``git reset --hard <remote>/<branch>``
+3. check you have no differences between the two branches: ``git diff <branch>...<remote><branch>`` should respond nothing.
+
+Source: [Git scm: Reset history](http://git-scm.com/docs/git-reset)
+
+
