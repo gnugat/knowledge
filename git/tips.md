@@ -42,6 +42,7 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 5. removing a remote tag: `git push <remote> :<tag-name>` (note the `:` before the tag name)
 6. removing a local tag: `git tag -d <tag-name>`
 7. renaming a tag: create an alias and remove the old tag
+8. moving a tag to the current commit: `git tag -f <tag-name>`
 
 ## Managing ref updates (checkout, reset, commit, merge, etc)
 
