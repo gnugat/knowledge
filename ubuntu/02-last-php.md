@@ -18,6 +18,10 @@ Source: [Greg Rickaby - How to install LAMP on Ubuntu](http://gregrickaby.com/ho
 
 # Installing last PHP 5.3 on Ubuntu 12.04
 
+**WARNING**: [Dotdeb](http://www.dotdeb.org/about/) was created to fix
+slow release system of Debian. So, you could have many issue with dependencies
+by using dotdeb on Ubuntu.
+
 This article describes how to get the last PHP 5.3 version on Ubuntu 12.04,
 using [Dotdeb instructions](http://www.dotdeb.org/instructions/).
 
