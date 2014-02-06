@@ -109,6 +109,6 @@ Source: [Git scm: Staging patches](http://git-scm.com/book/en/Git-Tools-Interact
 
 1. start fetch: `git fetch <remote>`
 2. reset from the chosen remote: `git reset --hard <remote>/<branch>`
-3. check you have no differences between the two branches: `git diff <branch>...<remote><branch>` should respond nothing.
+3. check you have no differences between the two branches: `git diff <branch>...<remote>/<branch>` should respond nothing.
 
 Source: [Git scm: Reset history](http://git-scm.com/docs/git-reset)
