@@ -1,5 +1,7 @@
 # Git tips
 
+Take a look at the [Git cheat sheet](../cheat-sheets/01-git.md).
+
 Resources:
 
 * [genomewiki](http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git)
@@ -19,30 +21,6 @@ When merging with Git, conflicts can happen. To resolve them, simply:
 2. edit the conflicted files and make the necessary modifications
 3. `git add` the resolved files
 4. `git commit` to finish the merge
-
-## Managing your branches
-
-1. listing existing branches: `git branch -avv`;
-2. creating a new branch and switch to it: `git checkout -b <branch-name>`
-3. renaming the current branch: `git branch -m <current-branch-name> <new-branch-name>`
-4. pushing the branch and tracking it: `git push -u <remote> <branch-name>`
-5. creating a branch from a remote one and track it: `git checkout -t <remote>/<branch-name>`
-6. tracking a remote branch: `git branch --set-upstream <branch-name> <remote>/<branch-name>`
-7. removing the remote branch: `git push <remote> :<branch-name>` (note the `:` before the branch name)
-8. removing a local branch: `git branch -d <branch-name>` (won't remove unmerged branches)
-9. removing branches that doesn't exist anymore on the repository: `git fetch -p`
-10. finding merged/unmerged branches: `git branch --merged; git banch --no-merged`
-
-## Managing your tags
-
-1. listing existing tags: `git tag`
-2. creating a new tag: `git tag -a <tag-name> -m '<message>'`
-3. pushing the tag: `git push <remote> <tag-name>`
-4. creating an alias: `git tag <existing-tag-name> <new-tag-name>`
-5. removing a remote tag: `git push <remote> :<tag-name>` (note the `:` before the tag name)
-6. removing a local tag: `git tag -d <tag-name>`
-7. renaming a tag: create an alias and remove the old tag
-8. moving a tag to the current commit: `git tag -f <tag-name>`
 
 ## Managing ref updates (checkout, reset, commit, merge, etc)
 
