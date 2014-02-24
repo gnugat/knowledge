@@ -46,7 +46,7 @@ Take a look at the [Git tips](../git/tips.md).
 ### The `<stash>` argument
 
 * refering to a stash by its number: `stast@{<number>}`
-* last stash number: `0`
+* most recent stash: `stast@{0}`
 * when ommiting the `<stash>` argument, `stash@{0}` is assumed
 
 References: [git ready](http://gitready.com/beginner/2009/03/13/smartly-save-stashes.html)
