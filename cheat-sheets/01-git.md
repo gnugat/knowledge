@@ -1,6 +1,6 @@
 # Git's cheat sheet
 
-A highly opinionated [Git](http://git-scm.com/] cheat sheet:
+A highly opinionated [Git](http://git-scm.com/) cheat sheet:
 
 * [Branches](#branches)
 * [Tags](#tags)
