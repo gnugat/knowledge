@@ -4,6 +4,7 @@ A highly opinionated [Git](http://git-scm.com/) cheat sheet:
 
 * [Branches](#branches)
 * [Tags](#tags)
+* [Stashes](#stashes)
 
 Take a look at the [Git tips](../git/tips.md).
 
@@ -31,3 +32,21 @@ Take a look at the [Git tips](../git/tips.md).
 * removing a local tag: `git tag -d <tag-name>`
 * changing the tag's commit to the current one: `git tag -f <tag-name>`
 * renaming a tag: `git tag <old-tag-name> <new-tag-name>; git -d <old-tag-name>`
+
+## Stashes
+
+* listing current stashes: `git stash list`
+* creating a new stash: `git stash`
+* creating a new stash with a description: `git stash save '<description>'`
+* applying the stash and remove it: `git stash pop <stash>`
+* applying the stash: `git stash apply <stash>`
+* removing all current stashes: `git stash clear`
+* removing the stash: `git stash drop <stash>`
+
+### The `<stash>` argument
+
+* refering to a stash by its number: `stast@{<number>}`
+* last stash number: `0`
+* when ommiting the `<stash>` argument, `stash@{0}` is assumed
+
+References: [git ready](http://gitready.com/beginner/2009/03/13/smartly-save-stashes.html)
