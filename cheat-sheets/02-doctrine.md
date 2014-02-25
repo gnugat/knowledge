@@ -6,11 +6,11 @@ A highly opinionated [Doctrine](http://www.doctrine-project.org/) cheat sheet
 
 ### Index by
 
-    <?php
-    
+```php
     $em
         ->createQueryBuilder()
         ->from('AcmeDemoBundle:Example', 'alias', 'alias.id')
     ;
+```
 
 References: [StackOverflow, via Grégoire Pineau and Jean François Simon](http://stackoverflow.com/a/15120793)
