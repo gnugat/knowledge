@@ -11,7 +11,8 @@ Take a look at the [Git tips](../git/tips.md).
 ## Branches
 
 * listing existing branches: `git branch -avv`
-* creating a new branch and switch to it: `git checkout -b <branch-name>`
+* creating a new branch and switching to it: `git checkout -b <branch-name>`
+* creating a new branch while cloning and switching to it: `git clone <repository> -b <branch-name>`
 * creating a branch from a remote one and track it: `git checkout -t <remote>/<branch-name>`
 * tracking a remote branch: `git branch --set-upstream <branch-name> <remote>/<branch-name>`
 * pushing the branch and tracking it: `git push -u <remote> <branch-name>`
