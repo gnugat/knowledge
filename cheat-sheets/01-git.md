@@ -28,6 +28,7 @@ Take a look at the [Git tips](../git/tips.md).
 * listing existing tags: `git tag`
 * creating a new tag: `git tag -a <tag-name> -m '<message>'`
 * creating an alias: `git tag <existing-tag-name> <new-tag-name>`
+* showing the message: `git tag -n<number-of-lines>`
 * pushing the tag: `git push <remote> <tag-name>`
 * removing a remote tag: `git push <remote> :<tag-name>` (note the `:` before the tag name)
 * removing a local tag: `git tag -d <tag-name>`
