@@ -4,24 +4,62 @@ A highly opinionated [Doctrine](http://www.doctrine-project.org/) cheat sheet
 
 ## QueryBuilder
 
-### Index by
+Reference: [The QueryBuilder, high level API](http://docs.doctrine-project.org/en/latest/reference/query-builder.html#high-level-api-methods).
 
 ```php
-    $em
-        ->createQueryBuilder()
-        ->from('AcmeDemoBundle:Example', 'alias', 'alias.id')
-    ;
+namespace Doctrine\DBAL\Query;
+
+class QueryBuilder
+{
+    public function where($predicates); // Overrrides all previously set conditions
+    public function andWhere($predicates);
+    
+    public function setParameters(array $keyValues);
+    
+    public function orderBy($field, $direction); // Overrrides all previously set conditions
+    public function addOrderBy($field, $direction);
+    
+    public function setMaxResults($limit);
+    
+    public function getQuery();
+}
 ```
 
-Reference: [StackOverflow, via Grégoire Pineau and Jean François Simon](http://stackoverflow.com/a/15120793)
-
-### Where in
+### Factories
 
 ```php
-    $em
-        ->where('alias.field IN (:parameter)')
-        ->setParameter('parameter', array())
-    ;
+namespace Doctrine\ORM;
+
+class EntityRepository
+{
+    public function createQueryBuilder($alias)
+    {
+        return $this->_em->createQueryBuilder()
+            ->select($alias)
+            ->from($this->_entityName, $alias);
+    }
+}
 ```
 
-Reference: [StackOverflow](http://stackoverflow.com/a/11874278)
+```php
+namespace Doctrine\ORM;
+
+class EntityManager
+{
+    public function createQueryBuilder()
+    {
+        return new QueryBuilder($this);
+    }
+}
+```
+
+### Code example
+
+```php
+$queryBuilder->where('alias.field IN (:arrayParameter) OR alias.field LIKE :expressionParameter');
+$queryBuilder->setParameters(array(
+    'arrayParameter' => array(),
+    'expressionParameter' => '%expr%',
+));
+$queryBuilder->getQuery();
+```
