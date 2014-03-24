@@ -2,10 +2,16 @@
 
 A highly opinionated bash cheat sheet.
 
+* [Conditions](#conditions):
+  * [string comparison](#string-comparison)
+  * [integer comparison](#integer-comparison)
+  * [file checking](#file-checking)
+
 ## Conditions
 
 Basics:
 
+```bash
     #!/usr/bin/env bash
     
     if [ expr ] && [ expr ]; then
@@ -17,9 +23,11 @@ Basics:
     else
         echo 'third'
     fi
+```
 
 ### String comparison
 
+```bash
     #!/usr/bin/env bash
     
     if [[ $a == z* ]]; then
@@ -35,9 +43,11 @@ Basics:
     elif [ -n "$string1" ]; then
         echo 'is not null, or is initialized'
     fi
+```
 
 ### Integer comparison
 
+```bash
     #!/usr/bin/env bash
     
     if [ "$a" -eq "$b" ]; then
@@ -53,9 +63,11 @@ Basics:
     elif [ "$a" -le "$b" ]; then
         echo 'is less than or equal to'
     fi
+```
 
 ### File checking
 
+```bash
     #!/usr/bin/env bash
     
     if [ -e $file]; then
@@ -81,9 +93,10 @@ Basics:
     elif [ $older -ot $newer ]; then
         echo 'is older than'
     fi
+```
 
 ## References
 
 * [File test operators](http://tldp.org/LDP/abs/html/fto.html)
 * [String and integer operators](http://tldp.org/LDP/abs/html/comparison-ops.html)
-* [the bracket construct(http://tldp.org/LDP/abs/html/testconstructs.html#DBLBRACKETS)]
+* [the bracket construct](http://tldp.org/LDP/abs/html/testconstructs.html#DBLBRACKETS)
