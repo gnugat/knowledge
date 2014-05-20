@@ -90,3 +90,16 @@ Source: [Git scm: Staging patches](http://git-scm.com/book/en/Git-Tools-Interact
 3. check you have no differences between the two branches: `git diff <branch>...<remote>/<branch>` should respond nothing.
 
 Source: [Git scm: Reset history](http://git-scm.com/docs/git-reset)
+
+## Keep a fork updated
+
+### Track the repository
+
+1. git clone git@github.com:johndoe/knowledge.git
+2. cd knowledge
+3. git remote add upstream git@github.com:gnugat/knowledge.git
+
+### Update the repository
+
+1. git fetch upstream
+2. git rebase upstream/master
