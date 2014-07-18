@@ -6,6 +6,7 @@ A highly opinionated [Git](http://git-scm.com/) cheat sheet:
 * [Branches](#branches)
 * [Tags](#tags)
 * [Stashes](#stashes)
+* [Remotes](#remotes)
 
 Take a look at the [Git tips](../git/tips.md).
 
@@ -51,3 +52,17 @@ Take a look at the [Git tips](../git/tips.md).
 * when ommiting the `<stash>` argument, `stash@{0}` is assumed
 
 References: [git ready](http://gitready.com/beginner/2009/03/13/smartly-save-stashes.html)
+
+## Remotes
+
+* listing existing remotes: `git remote -v`
+* adding one: `git remote add <remote-name> <repository-url>`
+* removing one: `git remote rm <remote-name>`
+* renaming one: `git remote  <current-remote-name> <new-remote-name>`
+* showing one: `git remote show <remote-name>`
+* changing URL: `git remote set-url <remote-name> <new-repository-url>`
+
+### Common remote names
+
+* `origin`: default name of the cloned repository
+* `upstream`: name of the original repository (used when your repository is a fork)
