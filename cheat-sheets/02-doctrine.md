@@ -11,6 +11,9 @@ namespace Doctrine\DBAL\Query;
 
 class QueryBuilder
 {
+    public function select($select); // Overrrides all previously set conditions
+    public function addSelect($select);
+
     public function where($predicates); // Overrrides all previously set conditions
     public function andWhere($predicates);
     
@@ -56,6 +59,7 @@ class EntityManager
 ### Code example
 
 ```php
+$queryBuilder->select('count(alias.field)');
 $queryBuilder->where('alias.field IN (:arrayParameter) OR alias.field LIKE :expressionParameter');
 $queryBuilder->setParameters(array(
     'arrayParameter' => array(),
