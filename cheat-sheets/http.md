@@ -2,6 +2,7 @@
 
 A highly opinionated HTTP cheat sheet:
 
+* [Request methods](#request-methods)
 * [Response status codes](#response-status-codes)
   * [2xx Success](#2xx-success)
   * [3xx Redirection](#3xx-redirection)
@@ -9,7 +10,16 @@ A highly opinionated HTTP cheat sheet:
   * [5xx Server error](#5xx-server-error)
 * [Form content types](#form-content-types)
 * [Resources](#resources)
-  
+
+## Request methods
+
+* `OPTIONS`: ask options and/or requirements associated with a resource [safe] [idempotent]
+* `GET`: retrieve a resource's information [safe] [idempotent]
+* `HEAD`: like `GET` but with headers only [idempotent]
+* `POST`: create a new resource
+* `PUT`: update a resource [idempotent]
+* `DELETE`: remove a resource [idempotent]
+
 ## Response status codes
 
 ### 2xx Success
