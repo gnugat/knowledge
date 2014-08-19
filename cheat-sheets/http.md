@@ -7,6 +7,7 @@ A highly opinionated HTTP cheat sheet:
   * [3xx Redirection](#3xx-redirection)
   * [4xx Client error](#4xx-client-error)
   * [5xx Server error](#5xx-server-error)
+* [Form content types](#form-content-types)
 * [Resources](#resources)
   
 ## Response status codes
@@ -36,6 +37,17 @@ A highly opinionated HTTP cheat sheet:
 
 * `500 INTERNAL SERVER ERROR`: exceptions, crash
 * `503 SERVICE UNAVAILABLE`: maintenance
+
+## Form content types
+
+By default, values submitted by an HTML form will have the one of the following content type:
+
+    Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+    Content-Type: multipart/form-data; charset=utf-8
+
+Using javascript, it can be changed to:
+
+    Content-Type: application/json; charset=utf-8
 
 ## Resources
 
