@@ -9,6 +9,7 @@ A highly opinionated HTTP cheat sheet:
   * [4xx Client error](#4xx-client-error)
   * [5xx Server error](#5xx-server-error)
 * [Form content types](#form-content-types)
+* [Vocabulary](#vocabulary)
 * [Resources](#resources)
 
 ## Request methods
@@ -58,6 +59,13 @@ By default, values submitted by an HTML form will have the one of the following 
 Using javascript, it can be changed to:
 
     Content-Type: application/json; charset=utf-8
+
+## Vocabulary
+
+* `entity`: data which can be sent or received with an HTTP message
+* `idempotent`: can be called many times without different outcomes
+* `resource`: data object or service identified by an URI
+* `safe`: do not modify resources
 
 ## Resources
 
