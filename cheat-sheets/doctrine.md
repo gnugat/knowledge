@@ -1,6 +1,10 @@
 # Doctrine's cheat sheet
 
-A highly opinionated [Doctrine](http://www.doctrine-project.org/) cheat sheet
+A highly opinionated [Doctrine](http://www.doctrine-project.org/) cheat sheet.
+
+* [QueryBuilder](#querybuilder)
+    * [Factories](#factories)
+    * [Code example](#code-example)
 
 ## QueryBuilder
 
