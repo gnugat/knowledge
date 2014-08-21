@@ -5,6 +5,8 @@ A highly opinionated [Doctrine](http://www.doctrine-project.org/) cheat sheet.
 * [QueryBuilder](#querybuilder)
     * [Factories](#factories)
     * [Code example](#code-example)
+* [EntityRepository](#entityrepository)
+    * [Counting](#counting) 
 
 ## QueryBuilder
 
@@ -70,4 +72,50 @@ $queryBuilder->setParameters(array(
     'expressionParameter' => '%expr%',
 ));
 $queryBuilder->getQuery();
+```
+
+## EntityRepository
+
+```php
+<?php
+
+namespace Doctrine\ORM;
+
+use Doctrine\DBAL\LockMode;
+use Doctrine\Common\Collections\Selectable;
+use Doctrine\Common\Collections\Criteria;
+use Doctrine\Common\Persistence\ObjectRepository;
+
+class EntityRepository implements ObjectRepository, Selectable
+{
+    public function getEntityManager();
+    public function createQueryBuilder($alias);
+
+    public function find($id, $lockMode = LockMode::NONE, $lockVersion = null);
+    public function findAll();
+
+    public function findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null);
+    public function findOneBy(array $criteria, array $orderBy = null);
+    public function matching(Criteria $criteria);
+}
+```
+
+### Counting
+
+```php
+<?php
+
+use Doctrine\ORM\EntityRepository;
+
+class MyRepository extends EntityRepository
+{
+    public function count()
+    {
+        return $this->createQueryBuilder('alias')
+            ->select('count(alias.id)')
+            ->getQuery()
+            ->getSingleScalarResult()
+        ;
+    }
+}
 ```
