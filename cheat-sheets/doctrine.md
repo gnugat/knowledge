@@ -7,6 +7,7 @@ A highly opinionated [Doctrine](http://www.doctrine-project.org/) cheat sheet.
     * [Code example](#code-example)
 * [EntityRepository](#entityrepository)
     * [Counting](#counting) 
+* [Resources](#resources)
 
 ## QueryBuilder
 
@@ -119,3 +120,7 @@ class MyRepository extends EntityRepository
     }
 }
 ```
+
+## Resources
+
+* [Mastering performance](http://labs.octivi.com/mastering-symfony2-performance-doctrine/)
