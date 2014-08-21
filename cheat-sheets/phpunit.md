@@ -2,6 +2,13 @@
 
 A highly opinionated [PHPUnit](http://phpunit.de/) cheat sheet.
 
+* [Assertions](#assertions)
+* [Annotations](#annotations)
+* [Test doubles](#test-doubles)
+    * [Stub](#stub)
+    * [Mock](#mock)
+* [Resources](#resources) 
+
 ## Assertions
 
 Prototype: `assertX($expected, $actual, $message = '')`
@@ -56,3 +63,7 @@ $mock->expects($this->once())
     ->with($this->equalTo('something'))
 ;
 ```
+
+## Resources
+
+* [phpunit-accelerator](https://github.com/mybuilder/phpunit-accelerator)
