@@ -37,7 +37,7 @@ A highly opinionated HTTP cheat sheet:
 
 ### 4xx Client error
 
-* `400 BAD REQUEST`: request with malformed syntax
+* `400 BAD REQUEST`: request with malformed syntax (example: invalid JSON)
 * `401 UNAUTHORIZED`: authenticated, but not permitted
 * `403 FORBIDDEN`: not authenticated (and authentication required)
 * `404 NOT FOUND`
