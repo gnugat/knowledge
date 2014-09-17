@@ -6,7 +6,9 @@ A highly opinionated [Doctrine](http://www.doctrine-project.org/) cheat sheet.
     * [Factories](#factories)
     * [Code example](#code-example)
 * [EntityRepository](#entityrepository)
-    * [Counting](#counting) 
+    * [Counting](#counting)
+* [Util](#util)
+    * [Debug](#debug)
 * [Resources](#resources)
 
 ## QueryBuilder
@@ -119,6 +121,14 @@ class MyRepository extends EntityRepository
         ;
     }
 }
+```
+
+## Util
+
+### Debug
+
+```php
+\Doctrine\Common\Util\Debug::dump($entity);
 ```
 
 ## Resources
