@@ -7,6 +7,7 @@ A highly opinionated [PHPUnit](http://phpunit.de/) cheat sheet.
 * [Test doubles](#test-doubles)
     * [Stub](#stub)
     * [Mock](#mock)
+* [Set up and tear down](#set-up-and-tear-down)
 * [Resources](#resources) 
 
 ## Assertions
@@ -62,6 +63,35 @@ $mock->expects($this->once())
     ->method('doSomething')
     ->with($this->equalTo('something'))
 ;
+```
+
+## Set up and tear down
+
+```php
+<?php
+
+class MyUnitTest extends PHPUnit_Framework_TestCase
+{
+   public static function setUpBeforeClass()
+   {
+      // Executed once before the first *test* method
+   }
+    
+    protected function setUp()
+    {
+        // Executed before every *test* method
+    }
+    
+    protected function tearDown()
+    {
+        // Executed after every *test* method
+    }
+    
+   public static function tearDownBeforeClass()
+   {
+      // Executed once after the last *test* method
+   }
+}
 ```
 
 ## Resources
