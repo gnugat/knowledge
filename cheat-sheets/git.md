@@ -22,6 +22,7 @@ Take a look at the [Git tips](../git/tips.md).
 * pushing the branch and tracking it: `git push -u <remote> <branch-name>`
 * removing the remote branch: `git push <remote> :<branch-name>` (note the `:` before the branch name)
 * removing a local branch: `git branch -d <branch-name>` (won't remove unmerged branches)
+* removing both local and remote branches: `git branch -rd <branch-name>`
 * removing branches that doesn't exist anymore on the repository: `git fetch -p`
 * renaming a branch: `git branch -m <current-branch-name> <new-branch-name>`
 * finding unmerged branches: `git banch --no-merged`
