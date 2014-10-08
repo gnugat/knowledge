@@ -7,6 +7,7 @@ A highly opinionated [Git](http://git-scm.com/) cheat sheet:
 * [Tags](#tags)
 * [Stashes](#stashes)
 * [Remotes](#remotes)
+* [Reverts](#reverts)
 
 Take a look at the [Git tips](../git/tips.md).
 
@@ -67,3 +68,10 @@ References: [git ready](http://gitready.com/beginner/2009/03/13/smartly-save-sta
 
 * `origin`: default name of the cloned repository
 * `upstream`: name of the original repository (used when your repository is a fork)
+
+## Reverts
+
+Create a new commit which undo a previous one.
+
+* reverting a commit: `git revert <commit-hash>`
+* reverting a merge: `git revert -m 1 <merge-commit-hash>`
