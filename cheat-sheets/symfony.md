@@ -20,12 +20,12 @@ Are you who you say you are?
     * call the appropriate authentication provider
     * handle exceptions
     * have many authentication providers
-* **Authentication Provides**:
+* **Authentication Providers**:
     * perform authentication using client data in the token
     * mark the token as authenticated
     * attach the user to the token
     * *may* rely on user provider
-* **User Provider**:
+* **User Providers**:
     * retrieve the user (from a database, a configuration file, etc)
 
 ### References
