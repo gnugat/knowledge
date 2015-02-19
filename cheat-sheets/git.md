@@ -37,7 +37,7 @@ Take a look at the [Git tips](../git/tips.md).
 * removing a remote tag: `git push <remote> :<tag-name>` (note the `:` before the tag name)
 * removing a local tag: `git tag -d <tag-name>`
 * renaming a tag: `git tag <old-tag-name> <new-tag-name>; git -d <old-tag-name>`
-* changing the tag's commit to the current one: `git tag -f <tag-name>`
+* changing the tag's commit to the current one: `git tag -f <tag-name> <commit-hash>`
 
 ## Stashes
 
