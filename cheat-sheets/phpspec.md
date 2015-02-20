@@ -10,7 +10,7 @@ A highly opinionated [phpspec](http://www.phpspec.net/) cheat sheet.
 
 ## Stub
 
-Specifies collaborators return value. Used together with methods that return value:
+To use when a collaborator's method returns a value:
 
     function it_can_be_assigned_tasks(Task $task)
     {
@@ -20,7 +20,7 @@ Specifies collaborators return value. Used together with methods that return val
 
 ## Mock
 
-Checks if collaborators methods have been called. Used together with methods that do not return value:
+To use when collaborator's method doesn't return a value:
 
     function it_can_be_assigned_tasks(Task $task)
     {
@@ -35,6 +35,7 @@ Checks if collaborators methods have been called. Used together with methods tha
     function let(Food $food)
     {
         $this->beConstructedWith(self::RESTAURANT, $food);
+        $this->beConstructThrough('make', array(self::RESTAURANT, $food)); // Static constructor
     }
 
     function letGo()
@@ -50,7 +51,7 @@ To prefix with `should` or `shouldNot`:
 
 * `Be`: strict comparison (`===`)
 * `BeLike`: loose comparison (`==`)
-* `Implement` or `BeAnInstanceOf`
+* `Implement`, `BeAnInstanceOf` or `HaveType`
 * `HaveCount`
 * primitives:
     * `BeString`
@@ -60,6 +61,8 @@ To prefix with `should` or `shouldNot`:
     * `BeDecimal`
 
 ### Exception
+
+    $collaborator->methodCall()->willThrow('\Exception');
 
     $this->shouldThrow('\Exception')->duringMethod($argument);
     $this->shouldThrow(new \Exception('message'))->duringMethod(array($argument));
