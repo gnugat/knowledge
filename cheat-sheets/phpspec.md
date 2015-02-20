@@ -87,3 +87,4 @@ To prefix with `should` or `shouldNot`:
 * [introducing BDD, by Dan North](http://dannorth.net/introducing-bdd/)
 * [phpspec illustrated by examples](http://www.slideshare.net/marcello.duarte/phpspec-20-ilustrated-by-examples)
 * [emergent design with phpspec](http://www.slideshare.net/marcello.duarte/emergent-design-with-phpspec)
+* [my top 10 favourite phpspec limitations](http://techportal.inviqa.com/2014/09/11/my-top-ten-favourite-phpspec-limitations/)
