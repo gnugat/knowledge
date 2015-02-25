@@ -88,3 +88,4 @@ To prefix with `should` or `shouldNot`:
 * [phpspec illustrated by examples](http://www.slideshare.net/marcello.duarte/phpspec-20-ilustrated-by-examples)
 * [emergent design with phpspec](http://www.slideshare.net/marcello.duarte/emergent-design-with-phpspec)
 * [my top 10 favourite phpspec limitations](http://techportal.inviqa.com/2014/09/11/my-top-ten-favourite-phpspec-limitations/)
+* [why your test suite sucks](http://www.slideshare.net/CiaranMcNulty/why-your-test-suite-sucks)
