@@ -38,8 +38,8 @@ A highly opinionated HTTP cheat sheet:
 ### 4xx Client error
 
 * `400 BAD REQUEST`: request with malformed syntax (example: invalid JSON)
-* `401 UNAUTHORIZED`: authenticated, but not permitted
-* `403 FORBIDDEN`: not authenticated (and authentication required)
+* `401 UNAUTHORIZED`: authentication issue (missing or invalid credentials)
+* `403 FORBIDDEN`: authorization issue (credential found and valid, but not allowed for this resource)
 * `404 NOT FOUND`
 * `409 CONFLICT` related to the state of the resource (think Finite State Machine)
 * `422 UNPROCESSABLE ENTITY`: error in domain (think validation) [RFC 2518 - WebDAV]
