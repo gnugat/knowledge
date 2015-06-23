@@ -16,6 +16,17 @@ discover new Principles, Patterns and Practices.
 * [François Zaninotto](https://twitter.com/francoisz)
 * [MyBuilder Tech](https://twitter.com/MyBuilderTech)
 * [Matthieu Napoli](https://twitter.com/matthieunapoli)
+* [Tom Oram](https://twitter.com/tomphp)
+* [Giulio De Donato](https://twitter.com/liuggio)
+* [Elnur Abdurrakhimov](https://twitter.com/abdurrakhimov)
+* [Florian LB](https://twitter.com/LBFlorian)
+* [Raphaël Lefebvre](https://twitter.com/raphlefebvre)
+* [Nico Schoenmaker](https://twitter.com/NicoSchoenmaker)
+* [Adam Brett](https://twitter.com/sixdaysad)
+* [Jeff Welch](https://twitter.com/whatthejeff)
+* [Daniel Ribeiro](https://twitter.com/drgomesp)
+* [Symfony News](https://twitter.com/symfony_en)
+* [Symfony Bloggers](https://twitter.com/sf_bloggers)
 
 ## Blogs
 
