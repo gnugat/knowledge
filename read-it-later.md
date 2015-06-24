@@ -27,6 +27,16 @@ discover new Principles, Patterns and Practices.
 * [Daniel Ribeiro](https://twitter.com/drgomesp)
 * [Symfony News](https://twitter.com/symfony_en)
 * [Symfony Bloggers](https://twitter.com/sf_bloggers)
+* [Symfony Bricks](https://twitter.com/SymfonyBricks)
+* [Nicolas Chaulet](https://twitter.com/n_chaulet)
+* [Michaël Perrin](https://twitter.com/michael_perrin)
+* [Wouter J](https://twitter.com/wouterjnl)
+* [JoliCode](https://twitter.com/JoliCode)
+* [Bernhard Schussek](https://twitter.com/webmozart)
+* [William Durand](https://twitter.com/couac)
+* [Jakub Zalas](https://twitter.com/jakub_zalas)
+* [Joseph ROUFF](https://twitter.com/rouffj)
+* [Ryan Weaver](https://twitter.com/weaverryan)
 
 ## Blogs
 
