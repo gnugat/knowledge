@@ -2,12 +2,22 @@
 
 A highly opinionated SQL cheat sheet:
 
+* [Create table](#create-table)
 * [Insert](#insert)
 * [Update](#update)
 * [Delete](#delete)
 * [Alter](#alter)
   * [Add column](#add-column)
   * [drop column](#drop-column)
+
+## Create table
+
+```
+CREATE TABLE table_name (
+    column type(length),
+    ...
+)
+```
 
 ## Insert
 
