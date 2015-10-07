@@ -1,6 +1,4 @@
-# Symfony
-
-## System test
+# System test
 
 A practice allowing you to check that an entry point of the application works as expected.
 
@@ -22,7 +20,7 @@ Its drawbacks:
 
 * usually slow to execute (can involve filesystem operations, database transactions and network requests)
 
-### Example
+## Example
 
 Using Symfony and PHPUnit:
 
