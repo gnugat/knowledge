@@ -6,8 +6,8 @@
 
 There's two ways to merge arrays:
 
-* using the `+` operator (in case of duplicate keys, preserves the element from the left-hand array)
-* using `array_merge` (in case of duplicate keys, overwrites the element using the right-hand array)
+* using the `+` operator (in case of duplicate keys, preserves the element from the **left-hand** array)
+* using `array_merge` (in case of duplicate keys, overwrites the element using the **right-hand** array)
 
 References:
 
