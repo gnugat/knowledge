@@ -5,7 +5,7 @@
 
 ## Installation instructions
 
-Reference: [Satis: building your own Composer repository|http://blog.servergrove.com/2015/04/29/satis-building-composer-repository/]
+Reference: [Satis: building your own Composer repository](http://blog.servergrove.com/2015/04/29/satis-building-composer-repository/)
 
 ### PHP
 
@@ -42,7 +42,7 @@ Then we need to create a `satis.json` file:
 Finally we need to set up the following cronjob:
 
 ```
-# Update satis "Constant Commerce Repository" every 5 minutes
+# Update satis "Acmeco Repository" every 5 minutes
 */5 * * * * /usr/bin/env php /home/foobar/satis/bin/satis build --no-interaction /home/foobar/satis/satis.json /home/foobar/satis/acme-repository
 ```
 
