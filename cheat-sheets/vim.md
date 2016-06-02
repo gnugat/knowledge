@@ -20,6 +20,24 @@ A highly opinionated vim cheat sheet.
 * `u`: undo last change
 * `Ctrl-R`: redo last undone change
 
+## Motions
+
+### word / WORD
+
+* `w`: move to the start of the next word
+* `e`: move to the end of the current or next word
+* `b`: move to the start of the current or previous word
+
+> **Note**: upper case next word motions (e.g. `W`) will consider `"word"` as being 1 WORD, instead of 3 words.
+
+### Inline occurence
+
+* `f`: move to the next character occurence in the current line
+* `t`: move one character before the next character occurence in the current line
+* `;`: repeats the previous inline motion
+
+> **Note**: upper case inline motions (e.g. `F`) will move to previous occurence.
+
 ## Splits
 
 * `Ctrl-W v`: creates a new vertical split
