@@ -12,7 +12,7 @@ A highly opinionated [PHPUnit](http://phpunit.de/) cheat sheet.
 
 ## Assertions
 
-Prototype: `assertX($expected, $actual, $message = '')`
+Prototype: `self::assertX($expected, $actual, $message = '')`
 
 * `assertSame`: strict equality (`===`)
 * `assertEquals`: loose equality (`==`)
@@ -20,10 +20,13 @@ Prototype: `assertX($expected, $actual, $message = '')`
 * `assertFalse`
 * `assertInstanceOf`
 
+For exceptions:
+
+* `$this->expectException(\Exception::class)`
+
 ## Annotations
 
-* `@dataProvider <methodName>`
-* `@expectedException <exceptionFcqn>`
+* `@test`: to avoid `test` prefix on test methods
 * `@group <name>`: to be used with `phpunit --group <name>`
 
 ## Test doubles
@@ -31,38 +34,19 @@ Prototype: `assertX($expected, $actual, $message = '')`
 ### Stub
 
 ```php
-$stub = $this->getMock('SomeClass');
+$stub = $this->prophesize(SomeClass::class);
 
-// or
-$stub = $this->getMockBuilder('SomeClass')
-    ->disableOriginalConstructor()
-    ->getMock()
-;
-
-$stub->method('doSomething')
-    ->willReturn('foo')
-;
-$stub->method('doSomething')
-    ->will($this->throwException(new \Exception()))
-;
+$stub->doSomething()->willReturn('foo');
+$stub->doSomething()->willThrow(\Exception::class);
 ```
 
 ### Mock
 
 ```php
-$mock = $this->getMock('SomeClass', array('doSomething'));
+$mock = $this->prophesize(SomeClass::class);
 
-// or
-$mock = $this->getMockBuilder('SomeClass')
-    ->disableOriginalConstructor()
-    ->setMethods(array('doSomething'))
-    ->getMock()
-;
-
-$mock->expects($this->once())
-    ->method('doSomething')
-    ->with($this->equalTo('something'))
-;
+$mock->doSomething('something')->shouldBeCalled();
+$mock->doSomething('something')->shouldBeCalledTimes(2);
 ```
 
 ## Set up and tear down
@@ -72,10 +56,10 @@ $mock->expects($this->once())
 
 class MyUnitTest extends PHPUnit_Framework_TestCase
 {
-   public static function setUpBeforeClass()
-   {
-      // Executed once before the first *test* method
-   }
+    public static function setUpBeforeClass()
+    {
+        // Executed once before the first *test* method
+    }
     
     protected function setUp()
     {
@@ -87,13 +71,15 @@ class MyUnitTest extends PHPUnit_Framework_TestCase
         // Executed after every *test* method
     }
     
-   public static function tearDownBeforeClass()
-   {
-      // Executed once after the last *test* method
-   }
+    public static function tearDownBeforeClass()
+    {
+        // Executed once after the last *test* method
+    }
 }
 ```
 
 ## Resources
 
 * [phpunit-accelerator](https://github.com/mybuilder/phpunit-accelerator)
+* [Questioning PHPUnit best practices](https://thephp.cc/news/2016/02/questioning-phpunit-best-practices)
+* [PHPUnit and prophecy](https://thephp.cc/news/2015/02/phpunit-4-5-and-prophecy)
