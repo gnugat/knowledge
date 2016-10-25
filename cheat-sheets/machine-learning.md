@@ -4,6 +4,21 @@ A highly opinionated ML cheat sheet.
 
 ## Classification
 
+### Bag of Words Model
+
+Assuming the occurence of each words can be used as a feature for training a classifier.
+
+#### How it works
+
+1. fitting: "learn" vocabulary by extracting each words from all sentences
+2. transforming: extract vocabulary word count for each sentence
+3. optionally keep only the most x used words
+
+#### Reference
+
+[Bag of Words for beginners](https://www.kaggle.com/c/word2vec-nlp-tutorial/details/part-1-for-beginners-bag-of-words)
+by [Kaggle](https://www.kaggle.com/)
+
 ### Naive Bayes Classifier
 
 Assuming that a statement probability of being of a certain type depends if this type is more likely
@@ -22,5 +37,7 @@ and if the statement contains more words of this type.
    * calculate likelihood: multiply type probability by statement type probability
    * the statement is likely being of the type that has the highest likelihood
 
-Reference: [Machine Learning: Naive Bayes](https://stovepipe.systems/post/machine-learning-naive-bayes),
+#### Reference
+
+[Machine Learning: Naive Bayes](https://stovepipe.systems/post/machine-learning-naive-bayes),
 by [Yannick de Lange](https://twitter.com/yannickl88)
