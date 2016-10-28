@@ -41,3 +41,28 @@ and if the statement contains more words of this type.
 
 [Machine Learning: Naive Bayes](https://stovepipe.systems/post/machine-learning-naive-bayes),
 by [Yannick de Lange](https://twitter.com/yannickl88)
+
+### Random Forest Classifier
+
+#### How it works
+
+1. "training":
+   * take a subset (~66%) of the data
+   * for each node:
+     - take randomly _m_ items from the subset
+     - pick the item that provides the best split and use it to do a binary split on that node
+     - for the next node, do the same with another _m_ random items from the subset
+2. "running":
+   * run input down all the trees
+   * take the average, or weighted average, or voting majority of all the results
+
+> _m_ can be either (your choice):
+>
+> * 1 (random splitter selection)
+> * total number of items (breiman’s bagger)
+> * something in between, e.g. ½√m, √m, and 2√m (random forest)
+
+#### Reference
+
+[A Gentle Introduction to Random Forests](https://citizennet.com/blog/2012/11/10/random-forests-ensembles-and-performance-metrics/),
+by [Dan Benyamin](https://twitter.com/dbenyamin)
