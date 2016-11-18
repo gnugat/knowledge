@@ -2,6 +2,18 @@
 
 A highly opinionated ML cheat sheet.
 
+## Getting Started
+
+* Deep Learning Demystified, by [Brandon Rohrer](https://brohrer.github.io/):
+    * [How Neural Networks work?][https://brohrer.github.io/deep_learning_demystified.html]
+    * [How Convolutional Neural Networks work?](https://brohrer.github.io/how_convolutional_neural_networks_work.html)
+* A Neural Network in 15 lines of Python, by [Andrew Trask](https://twitter.com/iamtrask):
+    * [basic Neural Network in 11 lines](http://iamtrask.github.io/2015/07/12/basic-python-network/)
+    * [adding Gradient Descent Optimizer](http://iamtrask.github.io/2015/07/27/python-network-part2/)
+    * [adding Hinston's Dropout](https://iamtrask.github.io/2015/07/28/dropout/)
+* [Practical Example: qualifying sales leads](https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3#.192b2lj98), by [Per Harald Borgen](https://twitter.com/perborgen)
+* [The mathematical theory behind Machine Learning](https://mostafa-samir.github.io/ml-theory-pt1/), by [Mostafa Samir](https://twitter.com/M0stafa_Samir)
+
 ## Classification
 
 ### Bag of Words Model
