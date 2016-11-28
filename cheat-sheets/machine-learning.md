@@ -11,12 +11,15 @@ A highly opinionated ML cheat sheet.
     * [basic Neural Network in 11 lines](http://iamtrask.github.io/2015/07/12/basic-python-network/)
     * [adding Gradient Descent Optimizer](http://iamtrask.github.io/2015/07/27/python-network-part2/)
     * [adding Hinston's Dropout](https://iamtrask.github.io/2015/07/28/dropout/)
+* Understanding the maths behind Deep Learning, with code implementations:
+    * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by [Michael Nielsen](https://twitter.com/michael_nielsen)
 * Gentlest Introduction to Tensorflow, by [Soon Hin Khor](https://twitter.com/neth_6):
     * [Linear regression for single feature single outcome model](https://medium.com/all-of-us-are-belong-to-machines/the-gentlest-introduction-to-tensorflow-248dc871a224#.pbfs8sxmz)
     * [Training illustrated in diagrams/code, and exploring training variations](https://medium.com/all-of-us-are-belong-to-machines/gentlest-introduction-to-tensorflow-part-2-ed2a0a7a624f#.eerdfyjcs)
     * [Matrices and multi-feature linear regression](https://medium.com/all-of-us-are-belong-to-machines/gentlest-intro-to-tensorflow-part-3-matrices-multi-feature-linear-regression-30a81ebaaa6c#.1c6z3z79z)
-* [Practical Example: qualifying sales leads](https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3#.192b2lj98), by [Per Harald Borgen](https://twitter.com/perborgen)
-* [The mathematical theory behind Machine Learning](https://mostafa-samir.github.io/ml-theory-pt1/), by [Mostafa Samir](https://twitter.com/M0stafa_Samir)
+* Practical Examples:
+    * [Qualifying sales leads](https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3#.192b2lj98), by [Per Harald Borgen](https://twitter.com/perborgen)
+    * [Deep Learning for RegEx](http://dlacombejr.github.io/2016/11/13/deep-learning-for-regex.html)
 
 ## Classification
 
