@@ -22,6 +22,24 @@ A highly opinionated ML cheat sheet.
     * [Qualifying sales leads](https://medium.com/xeneta/boosting-sales-with-machine-learning-fbcf2e618be3#.192b2lj98), by [Per Harald Borgen](https://twitter.com/perborgen)
     * [Deep Learning for RegEx](http://dlacombejr.github.io/2016/11/13/deep-learning-for-regex.html)
 
+## Regression
+
+### Neural Network
+
+Single Layer Neural Network can be represented by the following function: `activation(bias + (inputs)(weights)) = output`.
+
+> **Note**: `(inputs)(weights)` is a [matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication),
+> so it basically is the weighted sum of the inputs.
+
+By tweaking weights and bias it can approximate any arbitrary linear function, using the following "Gradient Descent" algorithm:
+
+1. initialize the weights randomly
+2. compute the output using the activation function
+3. compute the error using the cost function
+4. compute the error gradient
+5. adjust the weights and bias using the gradient
+6. go back to step 2, until the error is small enough
+
 ## Classification
 
 ### Bag of Words Model
