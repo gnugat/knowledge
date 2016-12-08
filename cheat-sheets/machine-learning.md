@@ -26,19 +26,26 @@ A highly opinionated ML cheat sheet.
 
 ### Neural Network
 
-Single Layer Neural Network can be represented by the following function: `activation(bias + (inputs)(weights)) = output`.
+Neural Networks can approximate any function, by applying an "activation" function to a bias plus the weighted sum of inputs: `y = σ(b + Σwx)`.
 
-> **Note**: `(inputs)(weights)` is a [matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication),
-> so it basically is the weighted sum of the inputs.
+Since for any probability problem there exists a function to calculate it, Neural Networks can be used to automatically
+find that function using meaningful "training" data and a "learning" algorithm such as the Stochastic Gradient Descent:
 
-By tweaking weights and bias it can approximate any arbitrary linear function, using the following "Gradient Descent" algorithm:
+1. initialize weights and biases randomly
+2. calculate a prediction for the given training input
+3. calculate the pediction error, using the expected output from the training data
+3. calculate the Gradient of the error
+4. adjust weights and biases with the gradient, then repeat from step 2 for a given number of epochs
 
-1. initialize the weights randomly
-2. compute the output using the activation function
-3. compute the error using the cost function
-4. compute the error gradient
-5. adjust the weights and bias using the gradient
-6. go back to step 2, until the error is small enough
+#### 1. Random Initialization
+
+#### 2. Activation Function
+
+#### 3. Error Function
+
+#### 4. Gradient
+
+#### 5. Epochs
 
 ## Classification
 
