@@ -51,7 +51,7 @@ Depending on the chosen activation function, initialize weights and biases as fo
   * 1 / √n for each weight with n being the number of neurons in the layer
     (using a standard deviation of 1 with a high number of neurons result with a saturated layers,
     and saturated layers are slow learners)
-* for softmax: all weights and biases set to 0
+* for the rest (softmax, ReLU, etc): all weights and biases set to 0
 
 > **Tip**: For debugging, seed random numbers to make calculation deterministic.
 
