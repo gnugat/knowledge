@@ -13,6 +13,11 @@ A highly opinionated ML cheat sheet.
     * [adding Hinston's Dropout](https://iamtrask.github.io/2015/07/28/dropout/)
 * Understanding the maths behind Deep Learning, with code implementations:
     * [A Gentle Introduction to Artificial Neural Networks](https://theclevermachine.wordpress.com/2014/09/11/a-gentle-introduction-to-artificial-neural-networks/) by [Dustin Stansbury](https://twitter.com/corrcoef)
+    * Machine Learning, by [Andrew Gibiansky](http://andrew.gibiansky.com/):
+        * [The bascics](http://andrew.gibiansky.com/blog/machine-learning/machine-learning-the-basics/)
+        * [Neural Networks](http://andrew.gibiansky.com/blog/machine-learning/machine-learning-neural-networks/)
+        * [Convolutional Neural Networks](http://andrew.gibiansky.com/blog/machine-learning/convolutional-neural-networks/)
+        * [Recurrent Neural Networks](http://andrew.gibiansky.com/blog/machine-learning/recurrent-neural-networks/)
     * [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) by [Michael Nielsen](https://twitter.com/michael_nielsen)
 * Gentlest Introduction to Tensorflow, by [Soon Hin Khor](https://twitter.com/neth_6):
     * [Linear regression for single feature single outcome model](https://medium.com/all-of-us-are-belong-to-machines/the-gentlest-introduction-to-tensorflow-248dc871a224#.pbfs8sxmz)
