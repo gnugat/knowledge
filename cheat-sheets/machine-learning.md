@@ -36,13 +36,26 @@ Neural Networks can approximate any function, by applying an "activation" functi
 Since for any probability problem there exists a function to calculate it, Neural Networks can be used to automatically
 find that function using meaningful "training" data and a "learning" algorithm such as the Stochastic Gradient Descent:
 
-1. initialize weights and biases randomly
+1. initialize weights and biases
 2. calculate a prediction for the given training input
 3. calculate the pediction error, using the expected output from the training data
 3. calculate the Gradient of the error
 4. adjust weights and biases with the gradient, then repeat from step 2 for a given number of epochs
 
-#### 1. Random Initialization
+#### 1. Weights/Biases Initialization
+
+Depending on the chosen activation function, initialize weights and biases as follow:
+
+* for sigmoid: Gaussian distribution with mean 0 and standard deviation:
+  * 1 for each bias (so it's picked randomly between -1 and 1 with mean 0)
+  * 1 / √n for each weight with n being the number of neurons in the layer
+    (using a standard deviation of 1 with a high number of neurons result with a saturated layers,
+    and saturated layers are slow learners)
+* for softmax: all weights and biases set to 0
+
+> **Tip**: For debugging, seed random numbers to make calculation deterministic.
+
+See: [Weight Initialization](http://neuralnetworksanddeeplearning.com/chap3.html#weight_initialization)
 
 #### 2. Activation Function
 
