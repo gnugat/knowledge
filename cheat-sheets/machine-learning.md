@@ -59,6 +59,25 @@ See: [Weight Initialization](http://neuralnetworksanddeeplearning.com/chap3.html
 
 #### 2. Activation Function
 
+For regression problems, a standard sigmoid function (also known as logistic function) can be used for activation:
+`sigmoid(y) = 1 / 1 + exp(-y)`, it ranges from 0 (saturates near -6) to 1 (saturates near 6).
+
+Sometimes the Hyperbolic Tangent (tanh) function performs better: `tanh(y) = (exp(y) - exp(-y)) / (exp(y) + exp(-y))`,
+it ranges from -1 (saturates near -3) to 1 (saturates near 3).
+
+Rectified Linear Unit (ReLU) often improve results when used on image recognition problems: `relu(y) = max(0, y)`,
+it returns 0 for negative sum of weighted input, otherwise it returns the sum of weighted input.
+
+Finally the softmax function is used in classification problems, where there are many outputs:
+`softmax(yj) = exp(zj) / Σexp(zk)`. The output of a neuron `j` is the exponential function of its sum of weighted input,
+divided by the sum of all the output neurons. This means the total of all output neurons will always be 1.
+
+References:
+
+* [Sigmoid neurons](http://neuralnetworksanddeeplearning.com/chap1.html#sigmoid_neurons)
+* [softmax](http://neuralnetworksanddeeplearning.com/chap3.html#softmax)
+* [Other models of artificial neuron](http://neuralnetworksanddeeplearning.com/chap3.html#other_models_of_artificial_neuron)
+
 #### 3. Error Function
 
 #### 4. Gradient
