@@ -46,7 +46,7 @@ find that function using meaningful "training" data and a "learning" algorithm s
 
 Depending on the chosen activation function, initialize weights and biases as follow:
 
-* for sigmoid: Gaussian distribution with mean 0 and standard deviation:
+* for sigmoid (standard, tanh): Gaussian distribution with mean 0 and standard deviation:
   * 1 for each bias (so it's picked randomly between -1 and 1 with mean 0)
   * 1 / √n for each weight with n being the number of neurons in the layer
     (using a standard deviation of 1 with a high number of neurons result with a saturated layers,
@@ -79,6 +79,19 @@ References:
 * [Other models of artificial neuron](http://neuralnetworksanddeeplearning.com/chap3.html#other_models_of_artificial_neuron)
 
 #### 3. Error Function
+
+For regression problems, the cross entropy cost function is usually used.
+
+> **Note**: The quadratic cost (aka Mean Squarred Error) function is often used in examples: as it is easier to learn
+> than the cross entropy, however it isn't as efficient.
+
+For classification problems, the log-likelihood function is used.
+
+References:
+
+* [Learning with gradient](http://neuralnetworksanddeeplearning.com/chap1.html#learning_with_gradient_descent)
+* [The cross entropy function](http://neuralnetworksanddeeplearning.com/chap3.html#the_cross-entropy_cost_function)
+* [Softmax and log-likelihood](http://neuralnetworksanddeeplearning.com/chap3.html#softmax)
 
 #### 4. Gradient
 
