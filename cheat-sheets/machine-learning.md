@@ -97,6 +97,28 @@ References:
 
 #### 5. Epochs
 
+#### Data
+
+In order to train our network, we need examples that map input to an expected output. We can split it in 3 sets:
+
+1. Training set: 70% of the examples,
+   the mean error will be used with the Gradient to modify parameters (weights and biases)
+2. Validating set: 15% of the examples,
+   the mean error will be used to stop the training once saturated,
+   it's purpose is to evaluate hyper parameters and prevent overfitting on training data
+3. Testing set: 15% of the examples,
+   the mean error will be used to evaluate parameters (weights and biases) and prevent overfitting on testing data
+
+#### Overfitting
+
+Overfitting is when our model optimizes for our training data but fails to be useful for new unknown data.
+To prevent this from happening, we can:
+
+* increase the amount of training data
+* use L2 regularlization
+* use L1 regularlization
+* use dropout
+
 ## Classification
 
 ### Bag of Words Model
