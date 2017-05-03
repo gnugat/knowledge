@@ -9,6 +9,7 @@ A highly opinionated SQL cheat sheet:
 * [Alter](#alter)
   * [Add column](#add-column)
   * [drop column](#drop-column)
+* [Join](#join)
 
 ## Create table
 
@@ -51,3 +52,7 @@ Short form:
 
     ALTER TABLE table_name
     DROP COLUMN column_name
+
+## Join
+
+![Join Graph](http://stevestedman.com/wp-content/uploads/MySqlJoinTypesThumbnail-774x1024.png)
