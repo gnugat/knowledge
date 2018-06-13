@@ -10,10 +10,10 @@ A highly opinionated [Composer](https://getcomposer.org/) cheat sheet.
 
 ## Commands
 
-* download packages: `composer install -o`
+* download packages: `composer install -a`
 * add package: `composer require <package>:<version>`
 * update package: `composer update <package>`
-* show installed version of package: `composer show -i <package>`
+* show installed version of package: `composer show <package> | grep version`
 
 ## Tips
 
