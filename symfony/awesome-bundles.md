@@ -1,7 +1,7 @@
 # Awesome bundles
 
-A highly opinionated list of [Symfony ~2.3](http://symfony.com/) bundles.
+A highly opinionated list of [Symfony](http://symfony.com/) bundles.
 
-* [FosHttpCacheBundle](http://foshttpcachebundle.readthedocs.org/en/latest/)
-* [NelmioCorsBundle](https://github.com/nelmio/NelmioCorsBundle)
-* [TacticianBundle](http://simplebus.github.io/SymfonyBridge/doc/command_bus_bundle.html)
+* [MicroFrameworkBundle](https://github.com/gnugat/micro-framework-bundle)
+* [MonologBundle](https://github.com/symfony/monolog-bundle)
+* [PommFoundationBundle](https://github.com/gnugat/pomm-foundation-bundle)
