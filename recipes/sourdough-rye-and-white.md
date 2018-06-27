@@ -1,5 +1,7 @@
 # Rye and White Sourdough
 
+> **Makes**: ~850g loaf
+
 Day and time in the title are only schedule suggestions,
 the methods contain the timings to follow.
 
@@ -7,8 +9,8 @@ the methods contain the timings to follow.
 
 ### Ingredients
 
-* 10g rye flour
-* 10g tapid water (tap water is fine)
+* 21g rye flour
+* 21g tapid water (tap water is fine)
 
 ### Method
 
@@ -30,9 +32,9 @@ which in turn results in more flavour as well as a more stable structure.
 
 ### Ingredients
 
-* 42g strong white flour
-* 21g tapid water (tap water is fine)
-* 20g rye sourdgouh starter
+* 85g strong white flour
+* 43g tapid water (tap water is fine)
+* 42g rye sourdgouh starter
 
 ### Method
 
@@ -47,10 +49,10 @@ which in turn results in more flavour as well as a more stable structure.
 
 ### Ingredients
 
-* 226g strong white flour
-* 170g tapid water (tap water is fine)
-* 83g Stiff Starter
-* 4g salt
+* 453g strong white flour
+* 340g tapid water (tap water is fine)
+* 170g Stiff Starter
+* 9g salt
 
 ### Method
 
