@@ -5,6 +5,9 @@
 Day and time in the title are only schedule suggestions,
 the methods contain the timings to follow.
 
+Here's a video to help on the methods:
+[How To Make Sourdough Bread Masterclass](https://www.youtube.com/watch?v=2FVfJTGpXnU)
+
 ## Feed (day 1 - 22:00)
 
 ### Ingredients
