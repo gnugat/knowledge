@@ -15,6 +15,7 @@ discover new Principles, Patterns and Practices.
 * [Roxanne Asnar](https://twitter.com/Rokseyna)
 * [Thifaine Noirault](https://twitter.com/aylarius)
 * [Aurélie Guillaume](https://twitter.com/slig36)
+* [Michelle Sanver](https://twitter.com/michellesanver)
 * [Ciaran McNulty](https://twitter.com/CiaranMcNulty)
 * [Arnaud Le Blanc](https://twitter.com/arnaud_lb)
 * [Mark Seemann](https://twitter.com/ploeh)
