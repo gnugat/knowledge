@@ -55,6 +55,7 @@ which in turn results in more flavour as well as a more stable structure.
 * 453g strong white flour
 * 340g tapid water (tap water is fine)
 * 170g Stiff Starter
+* 28g rye flour
 * 9g salt
 
 ### Method
