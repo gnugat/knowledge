@@ -9,6 +9,7 @@ discover new Principles, Patterns and Practices.
 
 > If `New tweet by a specific user` (twitter) Then `save for later` (pocket).
 
+* [Anne-Laure de Boissieu](https://twitter.com/AnneLaure2B)
 * [Elizabeth M Smith](https://twitter.com/auroraeosrose)
 * [Julia Evans](https://twitter.com/b0rk)
 * [Billie Thompson](https://twitter.com/PurpleBooth)
