@@ -96,7 +96,7 @@ Basics:
     fi
 ```
 
-## getops
+## getopts
 
 Synopis:
 
