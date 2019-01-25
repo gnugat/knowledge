@@ -6,6 +6,7 @@ A highly opinionated bash cheat sheet.
   * [string comparison](#string-comparison)
   * [integer comparison](#integer-comparison)
   * [file checking](#file-checking)
+* [getopts](#getopts)
 
 ## Conditions
 
@@ -107,12 +108,13 @@ while getopts OPTSTRING opt; do
 done
 ```
 
-The list of positioned short options is described in `OPTSTRING`:
+With `OPTSTRING` describing the short options:
 
 * starting `OPTSTRING` with a `:` will set Error Reporting to "silent mode"
 * each character describes a flag
   (eg for `script.sh -h -e -y`, `OPTSTRING` would be `hey`)
 * a character followed by a `:` describes a flag with an argument
+  (eg for `script -f /tmp/filename`, `OPTSTRING` would be `f:`)
 
 In case of error, `opt` will be set with the following value:
 
