@@ -95,8 +95,62 @@ Basics:
     fi
 ```
 
+## getops
+
+Synopis:
+
+```
+while getopts OPTSTRING opt; do
+    case $opt in
+        # Conditions
+    esac
+done
+```
+
+The list of positioned short options is described in `OPTSTRING`:
+
+* starting `OPTSTRING` with a `:` will set Error Reporting to "silent mode"
+* each character describes a flag
+  (eg for `script.sh -h -e -y`, `OPTSTRING` would be `hey`)
+* a character followed by a `:` describes a flag with an argument
+
+In case of error, `opt` will be set with the following value:
+
+* invalid option:
+  * `?`
+    * _in "silent mode", `OPTARG` is set with the invalid option character_
+* missing required argument:
+  * in "verbose mode": `?`, and an error message is printed
+  * in "silent mode": `:`, and `OPTARG` is set with the option character
+
+Example:
+
+```
+#!/bin/bash
+ 
+while getopts ":ab:" opt; do
+    case $opt in
+        a)
+            echo "-a was triggered!" >&2
+            ;;
+        b)
+            echo "-b was triggered, Parameter: $OPTARG" >&2
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            exit 1
+            ;;
+    esac
+done
+```
+
 ## References
 
 * [File test operators](http://tldp.org/LDP/abs/html/fto.html)
 * [String and integer operators](http://tldp.org/LDP/abs/html/comparison-ops.html)
 * [the bracket construct](http://tldp.org/LDP/abs/html/testconstructs.html#DBLBRACKETS)
+* [Small getops tutorial](https://wiki.bash-hackers.org/howto/getopts_tutorial)
