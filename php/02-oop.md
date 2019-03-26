@@ -15,7 +15,8 @@ Summary:
 
 ## What is an object?
 
-An object is a group of variables and functions, in order to define a behavior based on its data.
+An object is a group of variables and functions that,
+its responsibility is to define a behavior based on its data.
 
 Vocabulary:
 
@@ -26,8 +27,9 @@ Vocabulary:
 * code definition of the object: a class
 * object created and stored in a variable: an instance
 
-The object is responsible of manipulating its data, which means it should protect it against external changes.
-To do so, you can use visibility on its members:
+The object is responsible of manipulating its own data,
+which means it should be able to protect it against external changes.
+To do so, visibility can be used on its members:
 
 * public: the member can be called everywhere
 * private: the member can only be called by the object itself
@@ -46,23 +48,25 @@ Example:
         private $lastName;
         
         // Constructor
-        public function __construct($firstName, $lastName)
-        {
+        public function __construct(
+            string $firstName,
+            string $lastName
+        ) {
             $this->firstName = $firstName;
             $this->lastName = $lastName;
         }
         
         // Method
-        public function getFullName()
+        public function getFullName(): string
         {
             return $this->firstName.' '.$this->lastName;
         }
     }
     
     // Creating an instance of User
-    $user = new User('Loïc', 'Chardonnet');
+    $user = new User('Loïc', 'Faugeron');
 
-    // Print 'Loïc Chardonnet'
+    // Prints 'Loïc Faugeron'
     echo $user->getFullName();
 
     // Will cause a fatal error (Cannot access private property)
@@ -71,7 +75,8 @@ Example:
 
 ## Relationship
 
-An object can own another one (or even a collection of another one), and it can also manipulate one.
+An object can own another one (or even a collection of another one),
+and it can also manipulate one.
 
 Example:
 
@@ -88,14 +93,17 @@ Example:
         private $children;
         
         // Constructor
-        public function __construct($firstName, $lastName, array $children = array())
-        {
+        public function __construct(
+            string $firstName,
+            string $lastName,
+            array $children = []
+        ) {
             $this->firstName = $firstName;
             $this->lastName = $lastName;
             $this->children = $children;
         }
         
-        public function makeChild($firstName)
+        public function haveNewChild(string $firstName): User
         {
             $child = new User($firstName, $this->lastName);
             $this->children[] = $child;
@@ -104,7 +112,7 @@ Example:
         }
         
         // Method
-        public function getFullName()
+        public function getFullName(): string
         {
             return $this->firstName.' '.$this->lastName;
         }
@@ -113,7 +121,8 @@ Example:
 
 ### Tips
 
-A private member can only be accessed by an instance of the object. Which means the following example is possible:
+A private member can only be accessed by an instance of the object.
+Which means the following example is possible:
 
 ```php
     <?php
@@ -125,19 +134,21 @@ A private member can only be accessed by an instance of the object. Which means 
         private $lastName;
         
         // Constructor
-        public function __construct($firstName, $lastName)
-        {
+        public function __construct(
+            string $firstName,
+            string $lastName
+        ) {
             $this->firstName = $firstName;
             $this->lastName = $lastName;
         }
         
-        public function joinInWedlock(User $spouse)
+        public function joinInWedlock(User $spouse): void
         {
             $this->lastName = $spouse->lastName;
         }
         
         // Method
-        public function getFullName()
+        public function getFullName(): string
         {
             return $this->firstName.' '.$this->lastName;
         }
@@ -149,8 +160,8 @@ This behavior is not unique to PHP, for example it is the same as
 
 ## What are the different kinds of objects?
 
-According to [Anthony Ferrara](http://blog.ircmaxell.com/2013/11/beyond-object-oriented-programming.html), there are 5
-main kinds of objects.
+According to [Anthony Ferrara](http://blog.ircmaxell.com/2013/11/beyond-object-oriented-programming.html),
+there are 5 main kinds of objects.
 
 ### Representers
 
@@ -164,9 +175,9 @@ Example:
     
     class BlogPost
     {
-        public function isPublished() {}
-        public function getTitle() {}
-        public function getContent() {}
+        public function isPublished(): bool {}
+        public function getTitle(): string {}
+        public function getContent(): string {}
     }
 ```
 
@@ -187,7 +198,7 @@ Example:
     
     class Logger
     {
-        public function error($message) {}
+        public function error($message): void {}
     }
 ```
 
@@ -207,13 +218,14 @@ Example:
     
     class HttpKernel
     {
-        public function handle(Request $request) {}
+        public function handle(Request $request): Response {}
     }
 ```
 
 #### Tips
 
-Plumbers do nothing and should be kept short. It can follow these steps:
+Plumbers do nothing (delegates actions to Doers) and should be kept short.
+It can follow these steps:
 
 1. validating the input
 2. processing it
@@ -232,8 +244,7 @@ Example:
     
     class Yaml
     {
-        /** @return PHP array */
-        public function parse($fileContent) {}
+        public function parse($fileContent): array {}
     }
 ```
 
@@ -256,8 +267,7 @@ Example:
     
     class UserFactory
     {
-        /** @return an instance of User */
-        public function make() {}
+        public function make(): User {}
     }
 ```
 
