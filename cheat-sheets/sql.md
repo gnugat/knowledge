@@ -55,4 +55,6 @@ Short form:
 
 ## Join
 
-![Join Graph](http://stevestedman.com/wp-content/uploads/MySqlJoinTypesThumbnail-774x1024.png)
+![Join diagram](https://lukaseder.files.wordpress.com/2016/07/venn-join1.png)
+
+[See](https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/)
