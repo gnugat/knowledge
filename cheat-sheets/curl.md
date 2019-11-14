@@ -7,6 +7,7 @@ A highly opinionated curl cheat sheet.
 * post data: `-d <data>`
 * show response headers: `-i`
 * follow redirect: `-L`
+* upload file: `-F '<file_parameter_name>=@<path>'`
 
 Example:
 
