@@ -10,6 +10,7 @@ A highly opinionated HTTP cheat sheet:
   * [5xx Server error](#5xx-server-error)
 * [Form content types](#form-content-types)
 * [Vocabulary](#vocabulary)
+* [CORS](#cors)
 * [Resources](#resources)
 
 ## Request methods
@@ -66,6 +67,30 @@ Using javascript, it can be changed to:
 * `idempotent`: can be called many times without different outcomes
 * `resource`: data object or service identified by an URI
 * `safe`: do not modify resources
+
+## CORS
+
+### Response
+
+#### Access-Control-Expose-Headers
+
+By default the following 6 response headers are allowed to be exposed:
+
+* `Cache-Control`
+* `Content-Language`
+* `Content-Type`
+* `Expires`
+* `Last-Modified`
+* `Pragma`
+
+Any other headers need to listed in `Access-Control-Expose-Headers`. For example:
+
+```
+HTTP/1.1 204 NO CONTENT
+Vary: X-Api-Key
+Content-Length: 0
+Access-Control-Expose-Headers: Vary, Content-Length
+```
 
 ## Resources
 
