@@ -8,6 +8,18 @@ A highly opinionated ffmpeg cheat sheet.
 * speed up video & audio x2: `ffmpeg -i ./input -r 120 -filter_complex "[0:v]setpts=0.25*PTS[v];[0:a]atempo=2.0,atempo=2.0[a]" -map "[v]" -map "[a]" ./output`
 * speed up video & audio x4: `ffmpeg -i ./input -r 120 -filter_complex "[0:v]setpts=0.25*PTS[v];[0:a]atempo=2.0,atempo=2.0[a]" -map "[v]" -map "[a]" ./output`
 
+## Concatenating videos
+
+To losslessly concatenate two mp4 videos, convert them to MPEG-2 transport streams:
+
+```
+ffmpeg -i input1.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate1.ts
+ffmpeg -i input2.mp4 -c copy -bsf:v h264_mp4toannexb -f mpegts intermediate2.ts
+ffmpeg -i "concat:intermediate1.ts|intermediate2.ts" -c copy -bsf:a aac_adtstoasc output.mp4
+```
+
+[source](https://trac.ffmpeg.org/wiki/Concatenate)
+
 ## Slow down / Speed up video & audio
 
 * video: `setpts=<speed>*PTS`, with `0.5` to speed up x2, `0.25` for x4, etc
