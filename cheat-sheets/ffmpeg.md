@@ -8,6 +8,7 @@ A highly opinionated ffmpeg cheat sheet.
 * speed up video & audio x2: `ffmpeg -i ./input -r 60 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" ./output`
 * speed up video & audio x4: `ffmpeg -i ./input -r 120 -filter_complex "[0:v]setpts=0.25*PTS[v];[0:a]atempo=2.0,atempo=2.0[a]" -map "[v]" -map "[a]" ./output`
 * add audio to video: `ffmpeg -i ./video -i ./audio -filter_complex amix=inputs=2:duration=shortest ./output`
+* extract last frame from video: `ffmpeg -sseof -3 -i input -update 1 -q:v 1 last.jpg`
 
 ## Concatenating videos
 
