@@ -5,8 +5,9 @@ A highly opinionated ffmpeg cheat sheet.
 * find video FPS: `ffmpeg -i ./input 2>&1 | sed -n "s/.*, \(.*\) fp.*/\1/p"`
 * slow down video x2, remove audio: `ffmpeg -i ./input -r 15 -filter:v "setpts=2.0*PTS" -an ./output`
 * speed up video x2, remove audio: `ffmpeg -i ./input -r 60 -filter:v "setpts=0.5*PTS" -an ./output`
-* speed up video & audio x2: `ffmpeg -i ./input -r 120 -filter_complex "[0:v]setpts=0.25*PTS[v];[0:a]atempo=2.0,atempo=2.0[a]" -map "[v]" -map "[a]" ./output`
+* speed up video & audio x2: `ffmpeg -i ./input -r 60 -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" ./output`
 * speed up video & audio x4: `ffmpeg -i ./input -r 120 -filter_complex "[0:v]setpts=0.25*PTS[v];[0:a]atempo=2.0,atempo=2.0[a]" -map "[v]" -map "[a]" ./output`
+* add audio to video: `ffmpeg -i ./video -i ./audio -filter_complex amix=inputs=2:duration=shortest ./output`
 
 ## Concatenating videos
 
