@@ -10,6 +10,7 @@ A highly opinionated ffmpeg cheat sheet.
 * add audio to video: `ffmpeg -i ./video -i ./audio -filter_complex amix=inputs=2:duration=shortest ./output`
 * extract part of video (starting at 00:10, for 30s): `ffmpeg -ss 10 -i ./video -t 30 ./extract`
 * extract audio from video: `ffmpeg -i ./video -q:a 0 -map a ./sound`
+* extract first frame from video: `ffmpeg -i ./video -vframes 1 ./first.jpg`
 * extract last frame from video: `ffmpeg -sseof -3 -i ./input -update 1 -q:v 1 last.jpg`
 * add image at the beginning of video: `ffmpeg -loop 1 -framerate 30 -t 1 -i ./image -t 1 -f lavfi -i aevalsrc=0 -i ./video -filter_complex '[0:0] [1:0] [2:0] [2:1] concat=n=2:v=1:a=1' ./output`
 * add image at the end of video: `ffmpeg -i ./video -loop 1 -t 1 -i ./image -f lavfi -t 1 -i anullsrc -filter_complex "[0:v] [0:a] [1:v] [2:a] concat=n=2:v=1:a=1 [v] [a]" -map "[v]" -map "[a]" ./output`
