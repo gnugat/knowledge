@@ -15,6 +15,11 @@ A highly opinionated ffmpeg cheat sheet.
 * add image at the beginning of video: `ffmpeg -loop 1 -framerate 30 -t 1 -i ./image -t 1 -f lavfi -i aevalsrc=0 -i ./video -filter_complex '[0:0] [1:0] [2:0] [2:1] concat=n=2:v=1:a=1' ./output`
 * add image at the end of video: `ffmpeg -i ./video -loop 1 -t 1 -i ./image -f lavfi -t 1 -i anullsrc -filter_complex "[0:v] [0:a] [1:v] [2:a] concat=n=2:v=1:a=1 [v] [a]" -map "[v]" -map "[a]" ./output`
 
+## Rotating videos
+
+* strip rotation metadata: `ffmpeg -y -i ./video -c copy -metadata:s:v:0 rotate=0 ./output`
+* rotate 90°: `ffmpeg -noautorotate -i ./video -vf 'rotate=90*(PI/180):bilinear=0' -metadata:s:v:0 rotate=0 -pix_fmt yuv420p -codec:v libx264 -codec:a copy ./output`
+
 ## Concatenating videos
 
 To losslessly concatenate two mp4 videos, convert them to MPEG-2 transport streams:
