@@ -20,6 +20,22 @@ A highly opinionated ffmpeg cheat sheet.
 * strip rotation metadata: `ffmpeg -y -i ./video -c copy -metadata:s:v:0 rotate=0 ./output`
 * rotate 90°: `ffmpeg -noautorotate -i ./video -vf 'rotate=90*(PI/180):bilinear=0' -metadata:s:v:0 rotate=0 -pix_fmt yuv420p -codec:v libx264 -codec:a copy ./output`
 
+## Adding audio to video
+
+* replace `0.mp4`'s audio with `1.mp4`'s (will contain one audio track):
+  `ffmpeg -i 0.mp4 -i 1.mp4 -map 0:v -map 1:a -c copy -shortest output.mp4`
+* add `1.mp4`'s audio to `0.mp4` (will contain two audio tracks):
+  `ffmpeg -i 0.mp4 -i 1.mp4 -map 0 -map 1:a -c copy -shortest output.mp4`
+* merge `1.mp4`'s audio into `0.mp4`'s (will contain one audio track):
+  `ffmpeg -i 0.mp4 -i 1.mp4 -filter_complex "[0:a][1:a]amerge=inputs=2[a]" -map 0:v -map "[a]" -c copy -ac 2 -shortest output.mp4`
+
+* `-map` allows to manually select streams / tracks ([ffmpeg map](https://trac.ffmpeg.org/wiki/Map))
+* `-c copy` copies stream to avoid re-encoding (quality preserved, fast to process)
+  * if input audio stream isn't compatible with output's, only copy video's stream using `-c:v copy`
+* `-shortest` makes the output's duration the same as the shortest input's
+
+[source](https://stackoverflow.com/a/11783474/3437428)
+
 ## Concatenating videos
 
 To losslessly concatenate two mp4 videos, convert them to MPEG-2 transport streams:
