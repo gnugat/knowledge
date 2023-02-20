@@ -12,6 +12,11 @@ Source: https://www.16personalities.com/personality-types
 * **Strengths**: Curious, Perceptive, Enthusiastic, Excellent Communicator, Festive, Good-Natured
 * **Weaknesses**: People-Pleasing, Unfocused, Disorganized, Overly Accommodating, Overly Optimistic, Restless
 
+## ESFP
+
+* **Strengths**: Bold, Original, Aesthetics and Showmanship, Practical, Observant, Excellent People Skills
+* **Weaknesses**: Sensitive, Conflict-Averse, Easily Bored, Poor Long-Term Planners, Unfocused
+
 ## INTJ
 
 * **Strengths**: Rational, Informed, Independent, Determined, Curious, Original
