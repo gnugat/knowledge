@@ -61,3 +61,23 @@ Source: https://www.enneagraminstitute.com/
 * **7**: Become reclusive and isolated from reality, eccentric and nihilistic. Highly unstable and fearful of aggressions: they reject and repulse others and all social attachments.
 * **8**: Get obsessed yet frightened by their threatening ideas, becoming horrified, delirious, and prey to gross distortions and phobias.
 * **9**: Seeking oblivion, they may commit suicide or have a psychotic break with reality. Deranged, explosively self-destructive, with schizophrenic overtones. Generally corresponds to the Schizoid Avoidant and Schizotypal personality disorders.
+
+## Type 7
+
+* **Fear**: Of being deprived and in pain
+* **Desire**: To be satisfied and content—to have their needs fulfilled
+* **Motivations**: Want to maintain their freedom and happiness, to avoid missing out on worthwhile experiences, to keep themselves excited and occupied, to avoid and discharge pain.
+* **Centre**: Thinking
+* **Dominant Emotion**: Fear
+
+**Healthy Levels**:
+
+* **1**: Assimilate experiences in depth, making them deeply grateful and appreciative for what they have. Become awed by the simple wonders of life: joyous and ecstatic. Intimations of spiritual reality, of the boundless goodness of life.
+* **2**: Highly responsive, excitable, enthusiastic about sensation and experience. Most extroverted type: stimuli bring immediate responses—they find everything invigorating. Lively, vivacious, eager, spontaneous, resilient, cheerful.
+* **3**: Easily become accomplished achievers, generalists who do many different things well: multi-talented. Practical, productive, usually prolific, cross-fertilizing areas of interest.
+* **4**: As restlessness increases, want to have more options and choices available to them. Become adventurous and "worldly wise," but less focused, constantly seeking new things and experiences: the sophisticate, connoisseur, and consumer. Money, variety, keeping up with the latest trends important.
+* **5**: Unable to discriminate what they really need, become hyperactive, unable to say "no" to themselves, throwing self into constant activity. Uninhibited, doing and saying whatever comes to mind: storytelling, flamboyant exaggerations, witty wise-cracking, performing. Fear being bored: in perpetual motion, but do too many things—many ideas but little follow through.
+* **6**: Get into conspicuous consumption and all forms of excess. Self-centered, materialistic, and greedy, never feeling that they have enough. Demanding and pushy, yet unsatisfied and jaded. Addictive, hardened, and insensitive.
+* **7**: Desperate to quell their anxieties, can be impulsive and infantile: do not know when to stop. Addictions and excess take their toll: debauched, depraved, dissipated escapists, offensive and abusive.
+* **8**: In flight from self, acting out impulses rather than dealing with anxiety or frustrations: go out of control, into erratic mood swings, and compulsive actions (manias).
+* **9**: Finally, their energy and health is completely spent: become claustrophobic and panic-stricken. Often give up on themselves and life: deep depression and despair, self-destructive overdoses, impulsive suicide. Generally corresponds to the Bipolar disorder and Histrionic personality disorder.
