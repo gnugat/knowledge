@@ -2,13 +2,33 @@
 
 Source: https://www.enneagraminstitute.com/
 
+## Type 1
+
+* **Fear**: Of being corrupt/evil, defective
+* **Desire**: To be good, to have integrity, to be balanced
+* **Motivations**: Want to be right, to strive higher and improve everything, to be consistent with their ideals, to justify themselves, to be beyond criticism so as not to be condemned by anyone.
+* **Centre**: Instinctive
+* **Dominant Emotion**: Anger / Rage
+
+**Healthy Levels**:
+
+* **1**: Become extraordinarily wise and discerning. By accepting what is, they become transcendentally realistic, knowing the best action to take in each moment. Humane, inspiring, and hopeful: the truth will be heard.
+* **2**: Conscientious with strong personal convictions: they have an intense sense of right and wrong, personal religious and moral values. Wish to be rational, reasonable, self-disciplined, mature, moderate in all things.
+* **3**: Extremely principled, always want to be fair, objective, and ethical: truth and justice primary values. Sense of responsibility, personal integrity, and of having a higher purpose often make them teachers and witnesses to the truth.
+* **4**: Dissatisfied with reality, they become high-minded idealists, feeling that it is up to them to improve everything: crusaders, advocates, critics. Into "causes" and explaining to others how things "ought" to be.
+* **5**: Afraid of making a mistake: everything must be consistent with their ideals. Become orderly and well-organized, but impersonal, puritanical, emotionally constricted, rigidly keeping their feelings and impulses in check. Often workaholics—"anal-compulsive," punctual, pedantic, and fastidious.
+* **6**: Highly critical both of self and others: picky, judgmental, perfectionistic. Very opinionated about everything: correcting people and badgering them to "do the right thing"—as they see it. Impatient, never satisfied with anything unless it is done according to their prescriptions. Moralizing, scolding, abrasive, and indignantly angry.
+* **7**: Can be highly dogmatic, self-righteous, intolerant, and inflexible. Begin dealing in absolutes: they alone know "The Truth." Everyone else is wrong: very severe in judgments, while rationalizing own actions.
+* **8**: Become obsessive about imperfection and the wrongdoing of others, although they may fall into contradictory actions, hypocritically doing the opposite of what they preach.
+* **9**: Become condemnatory toward others, punitive and cruel to rid themselves of wrongdoers. Severe depressions, nervous breakdowns, and suicide attempts are likely. Generally corresponds to the Obsessive-Compulsive and Depressive personality disorders.
+
 ## Type 3
 
 * **Fear**: Of being worthless
 * **Desire**: To feel valuable and worthwhile
 * **Motivations**: Want to be affirmed, to distinguish themselves from others, to have attention, to be admired, and to impress others
-* **Centre**: Thinking
-* **Dominant Emotion**: Fear
+* **Centre**: Feeling
+* **Dominant Emotion**: Shame
 
 **Healthy Levels**:
 
