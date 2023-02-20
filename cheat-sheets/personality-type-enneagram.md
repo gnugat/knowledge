@@ -62,6 +62,26 @@ Source: https://www.enneagraminstitute.com/
 * **8**: Get obsessed yet frightened by their threatening ideas, becoming horrified, delirious, and prey to gross distortions and phobias.
 * **9**: Seeking oblivion, they may commit suicide or have a psychotic break with reality. Deranged, explosively self-destructive, with schizophrenic overtones. Generally corresponds to the Schizoid Avoidant and Schizotypal personality disorders.
 
+## Type 6
+
+* **Fear**: Of being without support and guidance
+* **Desire**: To have security and support
+* **Motivations**: Want to have security, to feel supported by others, to have certitude and reassurance, to test the attitudes of others toward them, to fight against anxiety and insecurity.
+* **Centre**: Thinking
+* **Dominant Emotion**: Fear
+
+**Healthy Levels**:
+
+* **1**: Become self-affirming, trusting of self and others, independent yet symbiotically interdependent and cooperative as an equal. Belief in self leads to true courage, positive thinking, leadership, and rich self-expression.
+* **2**: Able to elicit strong emotional responses from others: very appealing, endearing, lovable, affectionate. Trust important: bonding with others, forming permanent relationships and alliances.
+* **3**: Dedicated to individuals and movements in which they deeply believe. Community builders: responsible, reliable, trustworthy. Hard-working and persevering, sacrificing for others, they create stability and security in their world, bringing a cooperative spirit.
+* **4**: Start investing their time and energy into whatever they believe will be safe and stable. Organizing and structuring, they look to alliances and authorities for security and continuity. Constantly vigilant, anticipating problems.
+* **5**: To resist having more demands made on them, they react against others passive-aggressively. Become evasive, indecisive, cautious, procrastinating, and ambivalent. Are highly reactive, anxious, and negative, giving contradictory, "mixed signals." Internal confusion makes them react unpredictably.
+* **6**: To compensate for insecurities, they become sarcastic and belligerent, blaming others for their problems, taking a tough stance toward "outsiders." Highly reactive and defensive, dividing people into friends and enemies, while looking for threats to their own security. Authoritarian while fearful of authority, highly suspicious, yet, conspiratorial, and fear-instilling to silence their own fears.
+* **7**: Fearing that they have ruined their security, they become panicky, volatile, and self-disparaging with acute inferiority feelings. Seeing themselves as defenseless, they seek out a stronger authority or belief to resolve all problems. Highly divisive, disparaging and berating others
+* **8**: Feeling persecuted, that others are "out to get them," they lash-out and act irrationally, bringing about what they fear. Fanaticism, violence.
+* **9**: Hysterical, and seeking to escape punishment, they become self-destructive and suicidal. Alcoholism, drug overdoses, self-abasing behavior. Generally corresponds to the Passive-Aggressive and Paranoid personality disorders.
+
 ## Type 7
 
 * **Fear**: Of being deprived and in pain
