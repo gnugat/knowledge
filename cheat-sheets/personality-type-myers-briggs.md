@@ -22,6 +22,11 @@ Source: https://www.16personalities.com/personality-types
 * **Strengths**: Rational, Informed, Independent, Determined, Curious, Original
 * **Weaknesses**: Arrogant, Dismissive of Emotions, Overly Critical, Combative, Socially Clueless
 
+## ISFJ
+
+* **Strengths**: Supportive, Reliable, Observant, Enthusiastic, Hardworking, Good Practical Skills
+* **Weaknesses**: Overly Humble, Taking Things Personally, Repressing Their Feelings, Overcommitted, Reluctant to Change, Too Altruistic
+
 ## ISTJ
 
 * **Strengths**: Honest and Direct, Strong-willed and Dutiful, Very Responsible, Calm and Practical, Create and Enforce Order, Jacks-of-all-trades
