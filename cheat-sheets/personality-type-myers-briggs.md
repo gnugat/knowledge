@@ -17,6 +17,11 @@ Source: https://www.16personalities.com/personality-types
 * **Strengths**: Efficient, Energetic, Self-Confident, Strong-Willed, Strategic Thinkers, Charismatic and Inspiring
 * **Weaknesses**: Stubborn and Dominant, Intolerant, Impatient, Arrogant, Poor Handling of Emotions, Cold and Ruthless
 
+## ENTP
+
+* **Strengths**: Knowledgeable, Quick Thinkers, Original, Excellent Brainstormers, Charismatic, Energetic
+* **Weaknesses**: Very Argumentative, Insensitive, Intolerant, Can Find It Difficult to Focus, Dislike Practical Matters
+
 ## ESFP
 
 * **Strengths**: Bold, Original, Aesthetics and Showmanship, Practical, Observant, Excellent People Skills
