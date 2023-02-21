@@ -1,0 +1,53 @@
+# ChatGPT Prompts
+
+## [The AI advantage](https://www.youtube.com/@aiadvantage)
+
+### [Text Manipulation](https://www.youtube.com/watch?v=k0xsloC86hk)
+
+* Generate text:
+  - prompt: `write a [length] [writing results] on [topic] in the style of [style]`
+  - example: `write a 200 word email on Test Driven Development in the style of Kent Beck`
+* Rephrase text: `Rephrase the following text: [text]`
+* Summarise: `Provide me with an outline for [copy pqste text, or insert book/movie name]`
+
+### [The Art of Argumentation](https://www.youtube.com/watch?v=os-JX1ZQwIA)
+
+```
+Can you write an argument [for/against][subject] from multiple diverse perspectives?
+Before you do so, state the characteristics of the various characters?
+```
+
+Useful follow ups:
+
+* `How would you disarm the first argument?`
+
+### [Generate Text Based on Style](https://www.youtube.com/watch?v=N_Hlz5PaeA0)
+
+```
+Analyze the following text for style and tone of voice.
+Apply that exact style and tone of voice to all your future responses:
+
+[Example: Copy paste an email you've written, to teach ChatGPT your email writing style]
+```
+
+Useful follow ups:
+
+* `try again`
+* `Keep going`
+
+### [Generate Prompts](https://www.youtube.com/watch?v=kvOm0HEYyQ4)
+
+```
+Now generate use cases from a chatbot prompt formula.
+You will be turning a prompt formula like "Write me [type of text]" to "Write me an essay".
+Always maintain the structure of the prompt formula and only replace the word in square brackets.
+
+Now generate a list of 10 prompts without executing them for:
+Can you write a [type of profile] for me, highlighting [interests] in a way that is likely to attract [audience]?
+```
+
+Useful follow ups:
+
+* `continue`
+* `10 more`
+* `Expand on #10`
