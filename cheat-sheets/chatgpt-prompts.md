@@ -51,3 +51,27 @@ Useful follow ups:
 * `continue`
 * `10 more`
 * `Expand on #10`
+
+## [Indie Darlings](https://www.youtube.com/@indiedarlings)
+
+### [Useful promtps](https://www.youtube.com/watch?v=ZlJhJOzvUFw)
+
+* `Act like you're an expert in X`
+* `Present the information in a table`
+* `Don’t write about X`
+* `Only explain X`
+* `For this target audience`
+
+### [Screenwriting]([Screenwriting](https://www.youtube.com/watch?v=1IAK2YpnsJ4)
+
+```
+Hello. I want you to act as if you are my screen writing partner.
+I want to write a romantic comedy in the style of Harold and Maude.
+Write me a completly original logline of a romantic comedy, starring two female characters.
+```
+
+Useful follow ups:
+* `Write me another prompt, instead of the grandmother make it one of the character's step mother`
+* `Using the Dan Hammond story circle, write me 8 beats of drama that tell this story from beginning to end`
+* `write me an extremely detailed treatment of this movie`
+* `write me a shotlist of this treatment ready for filming`
