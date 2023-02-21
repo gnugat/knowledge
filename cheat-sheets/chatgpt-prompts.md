@@ -52,6 +52,27 @@ Useful follow ups:
 * `10 more`
 * `Expand on #10`
 
+## [Dr Alex Young](https://www.youtube.com/@AlexanderFYoung)
+
+### [Useful promtps and tips](https://www.youtube.com/watch?v=HGDxu3kPErs)
+
+* Brainstorm ideas: `For the topic above, brainstorm new ideas or approaches. Prioritize ideas that are uncommon or novel`
+* Use columns to get specific: `Topic: W. For audience: x. Content goal: Y. Writing Style: Z`
+* Conversation: `Do not write all the conversation at once. Write in short sentences in simple, conversational language.`
+
+Style commands:
+
+```
+Topic: X
+
+Write a short blog post on the above topic.
+
+- Use H2 tags for each section
+- Use strong persuasive language
+- Ask questions to transition between paragraphs
+- Back up main points with evidence, examples and stories
+```
+
 ## [Indie Darlings](https://www.youtube.com/@indiedarlings)
 
 ### [Useful promtps](https://www.youtube.com/watch?v=ZlJhJOzvUFw)
