@@ -151,7 +151,7 @@ Let's think about X
 * `Only explain X`
 * `For this target audience`
 
-### [Screenwriting]([Screenwriting](https://www.youtube.com/watch?v=1IAK2YpnsJ4)
+### [Usage Example: Screenwriting]([Screenwriting](https://www.youtube.com/watch?v=1IAK2YpnsJ4)
 
 ```
 Hello. I want you to act as if you are my screen writing partner.
@@ -164,3 +164,16 @@ Useful follow ups:
 * `Using the Dan Hammond story circle, write me 8 beats of drama that tell this story from beginning to end`
 * `write me an extremely detailed treatment of this movie`
 * `write me a shotlist of this treatment ready for filming`
+
+
+## [Caleb Wells](https://www.youtube.com/@c_r_wells)
+
+### [Usage Example: Screenwriting](https://www.youtube.com/watch?v=Xs7wieu-35k)
+
+* `Write a horror film that takes place on the west coast with a cast of 4 and the monster is a shark`
+* `Write character profiles`
+* `Write the outline using save the cat story structure`
+* `Write The Opening Image in a screenplay format`
+* `Rewrite this in Seattle`
+* `Write Theme Stated`
+* `Expand on Samantha's fear in this scene`
