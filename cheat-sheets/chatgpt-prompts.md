@@ -200,3 +200,22 @@ Useful follow ups:
 * `Rewrite this in Seattle`
 * `Write Theme Stated`
 * `Expand on Samantha's fear in this scene`
+
+### [Detailed Usage Example: Screenwriting](https://www.youtube.com/watch?v=7ySKkLAmqbo)
+
+* `Write a horror film that takes place in the woods with a small cast`
+* `Change cabin to tent`
+* `Write character profiles`
+* `Write an outline using the save the cat story structure`
+* `Write Act 1 Opening Image`
+* `Write a detailed scene as they chat and drive`
+* `Rewrite this in a screenplay format`
+* `Write this scene: As they pull up to the campsite, they grab their gear and start setting up their tent, eager to start exploring the surrounding wilderness`
+* `Write Act 1 Theme Stated`
+* `rewrite with it being night`
+* `Write Act 1 Set-Up`
+
+Then due to connection issue, had to start a brand new chat.
+Copy Pasted all the previously generated replies from ChatGPT in the new chat,
+in one message, with `Write Act 1 Set-Up in screenplay format` at the very end.
+ 
