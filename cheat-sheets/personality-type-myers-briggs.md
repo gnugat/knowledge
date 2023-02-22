@@ -32,6 +32,11 @@ Source: https://www.16personalities.com/personality-types
 * **Strengths**: Bold, Rational and Practical, Original, Perceptive, Direct, Sociable
 * **Weaknesses**: Insensitive, Impatient, Risk-prone, Unstructured, May Miss the Bigger Picture, Defiant
 
+## INFJ
+
+* **Strengths**: Creative, Insightful, Principled, Passionate, Altruistic
+* **Weaknesses**: Sensitive to Criticism, Reluctant to Open Up, Perfectionistic, Avoiding the Ordinary, Prone to Burnout
+
 ## INFP
 
 * **Strengths**: Empathetic, Generous, Open-Minded, Creative, Passionate, Idealistic
