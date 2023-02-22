@@ -26,6 +26,11 @@ Source: https://www.16personalities.com/personality-types
 
 * **Strengths**: Bold, Original, Aesthetics and Showmanship, Practical, Observant, Excellent People Skills
 * **Weaknesses**: Sensitive, Conflict-Averse, Easily Bored, Poor Long-Term Planners, Unfocused
+* 
+## ESTP
+
+* **Strengths**: Bold, Rational and Practical, Original, Perceptive, Direct, Sociable
+* **Weaknesses**: Insensitive, Impatient, Risk-prone, Unstructured, May Miss the Bigger Picture, Defiant
 
 ## INFP
 
