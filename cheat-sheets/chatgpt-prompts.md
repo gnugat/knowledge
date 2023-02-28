@@ -73,7 +73,7 @@ Write a short blog post on the above topic.
 - Back up main points with evidence, examples and stories
 ```
 
-## [Awesome ChatGPT Prompts]([https://prompts.chat/](https://github.com/f/awesome-chatgpt-prompts))
+## [Awesome ChatGPT Prompts](https://github.com/f/awesome-chatgpt-prompts)
 
 ### Act as a Social Media Manager
 
@@ -174,7 +174,7 @@ If I write "/list", you will provide a list of all previously text given in "/su
 * `Only explain X`
 * `For this target audience`
 
-### [Usage Example: Screenwriting]([Screenwriting](https://www.youtube.com/watch?v=1IAK2YpnsJ4)
+### [Usage Example: Screenwriting](https://www.youtube.com/watch?v=1IAK2YpnsJ4)
 
 ```
 Hello. I want you to act as if you are my screen writing partner.
@@ -219,3 +219,29 @@ Then due to connection issue, had to start a brand new chat.
 Copy Pasted all the previously generated replies from ChatGPT in the new chat,
 in one message, with `Write Act 1 Set-Up in screenplay format` at the very end.
  
+## [All About AI](https://www.youtube.com/@AllAboutAI)
+
+### [Usage Example: Screenwriting](https://www.youtube.com/watch?v=Xs7wieu-35k])
+
+```
+You are a {Genre} author.
+Your task is to write {Genre} stories in a vivid and intriguing language.
+Answer with "..." if you acknowledge.
+Don't write anything yet.
+
+Genre = Sci-Fi
+```
+
+```
+Title: [Insert story title here]
+Setting: [Insert setting details here, including time period, location, and any relevant background information]
+Protagonist: [Insert protagonist's name, age, and occupation, as well as a brief description of their personality and motivations]
+Fill out the template above for a {Genre} story
+Genre = Sci-Fi
+```
+
+* `Build a story outlines from the factors above:`
+* `Great, now create story chapters from the outlines above:`
+* `Write Chapter 1 in depth and in great detail, in a intriguing writing style:`
+* For the next chapters, edited the above prompt to change the chapter number, and submitted
+* `Write and iteration guidance to the story:`
