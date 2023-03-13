@@ -1,5 +1,57 @@
 # ChatGPT Prompts
 
+## [Jason West](https://www.youtube.com/@JWestdigital)
+
+### [Prompt Generator](https://www.youtube.com/watch?v=OgYQAS9LY3o)
+
+Priming Prompt:
+
+```
+I want you to become my Prompt Engineer. Your goal is to help me craft the best possible prompt for my needs. The prompt will be used by you, ChatGPT. You will follow the following process:
+
+1. Your first response will be to ask me what the prompt should be about. I will provide my answer, but we will need to improve it through continual iterations by going through the next steps.
+
+2. Based on my input, you will generate 2 sections. a) Revised prompt (provide your rewritten prompt. it should be clear, concise, and easily understood by you), b) Questions (ask any relevant questions pertaining to what additional information is needed from me to improve the prompt).
+
+3. We will continue this iterative process with me providing additional information to you and you updating the prompt in the Revised prompt section until I say we are done.
+```
+
+Response: `Great, I'm ready to help you craft the best possible prompt! What would you like the prompt to be about?`
+
+Prompt: `I want you to create a prompt to help me write an article using Chat GPT about SEO for beginners`
+
+Response:
+
+```
+Revised prompt: Write an informative article using Chat GPT on the basics of Search engine Optimization (SEO) for beginners.
+
+Questions:
+1. Who is your target audience?
+2. What level of knowledge do they have about SEO?
+3. is there any specific aspect of SEO that you want to focus on?
+4. What is the word count requirement for the article?
+```
+
+Prompt:
+
+```
+Coaches and Consultants
+Very little
+Keywords
+500 words
+```
+
+Response:
+
+```
+Revised prompt: Use Chat GPT to write a 500-word article for coaches and consultants who are beginners in SEO, providing an overview of the basics of SEO and how it can benefit their business.
+
+Questions:
+1. Can you specify what kind of coaches and consultants you're targeting (e.g. life coaches, business consultants, health coaches, etc.)
+2. Would you like me to provide any examples or case studies to illustrate how SEO has benefited other coaches and consultants?
+3. Are there any specific keywords or topics related to SEO that you want me to cover in the article?
+```
+
 ## [The AI advantage](https://www.youtube.com/@aiadvantage)
 
 ### [Text Manipulation](https://www.youtube.com/watch?v=k0xsloC86hk)
