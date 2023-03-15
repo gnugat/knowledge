@@ -193,6 +193,19 @@ Let's think about X
 ...from a 'reverse' perspective
 ```
 
+## [David Shapiro](https://www.youtube.com/@DavidShapiroAutomator)
+
+### [Iterative Refinement](https://www.youtube.com/watch?v=fLyztRserAQ)
+
+> This is another advanced technique which is you ask it to summarise what you've done so far:
+
+```
+PROMPT: Can you recap and summarise everything we're doing
+ChatGPT: <recaps the immediately previous message, not the whole conversation>
+PROMPT: Not quite. Take a big step back. What are we doing here? Zoom out.
+ChatGPT: <recaps the whole conversation>
+```
+
 ## [@monitaure](https://github.com/monitaure)
 
 ### Usage Example: Article Curation
