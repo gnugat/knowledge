@@ -1,4 +1,4 @@
-# ChatGPT Prompt Engioneering
+# ChatGPT Prompt Engineering
 
 ## Iterative Improvement
 
