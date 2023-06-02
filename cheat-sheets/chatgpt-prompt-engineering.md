@@ -16,6 +16,8 @@ Reply simply with "Ok" to acknowledge.
 
 Source: [Underscore_](https://www.youtube.com/@Underscore_)'s [Prompt Engineering](https://www.youtube.com/watch?v=rnDbi8gti0U)
 
+Examples: [ChatGPT Prompt Engineering Example: Role Priming](https://github.com/gnugat/knowledge/blob/master/cheat-sheets/chatgpt-prompt-engineering-examples.md#role-priming)
+
 ## Iterative Improvement
 
 First generate criticisms:
