@@ -46,3 +46,14 @@ See:
 
 * [install using the repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 * [got permission denied](https://stackoverflow.com/a/48450294/3437428)
+
+## Usage
+
+* `docker compose build`: builds Docker images, or rebuilds if `Dockerfile` has changed
+* `docker compose run --rm %service_name% <command>`: starts a new container to run a command, then deletes the container
+  * `docker compose run --rm %service_name% composer install -o`: executes commands in the service
+* `docker compose up -d`: starts services from the images
+* `docker compose exec %service_name% <command>`: executes a command in an already running container
+  * `docker compose exec %service_name% bash`: opens an interactive shell
+* `docker compose down`: stops services
+  (container's ephemeral filesystem will be removed, including the files that haven't been persisted in a specific volume)
