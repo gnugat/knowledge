@@ -10,3 +10,4 @@
 * https://symfony.com/doc/6.4/the-fast-track/en/32-rabbitmq.html
 * https://symfony.com/doc/current/components/messenger.html
 * https://symfony.com/doc/current/messenger.html#messenger-handler-config
+* https://medium.com/codait/handling-failure-successfully-in-rabbitmq-22ffa982b60f
