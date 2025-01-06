@@ -1,6 +1,7 @@
 # Atomist
 
 * [Software that writes and evolves software](https://medium.com/the-composition/software-that-writes-and-evolves-software-953578a6fc36)
+    * [Growing an app with templates](https://www.youtube.com/watch?v=jJ4e6cIBgYM) Talk by Jessica Kerr
 * [Evolving projects using Atomist editors](https://medium.com/the-composition/evolving-projects-using-atomist-editors-fd3b1f057c86)
 * [Understand, automate, collate](https://medium.com/the-composition/understand-automate-collaborate-1b5695ecb724)
 * [Rug: new Atomist github repos](https://medium.com/@springrod/rugs-at-the-bazaar-open-source-atomist-6c23de4abe74)
