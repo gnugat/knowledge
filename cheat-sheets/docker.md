@@ -49,11 +49,14 @@ See:
 
 ## Usage
 
-* `docker compose build`: builds Docker images, or rebuilds if `Dockerfile` has changed
-* `docker compose run --rm %service_name% <command>`: starts a new container to run a command, then deletes the container
-  * `docker compose run --rm %service_name% composer install -o`: executes commands in the service
-* `docker compose up -d`: starts services from the images
-* `docker compose exec %service_name% <command>`: executes a command in an already running container
-  * `docker compose exec %service_name% bash`: opens an interactive shell
+* `docker build -t <name>`: builds Docker images (or rebuilds if `Dockerfile` has changed)
+  * `docker build -t <name> --no-cache`: rebuilds Docker image everytime
+* `docker run -it <name> <command>`: starts a new container to run a command (`-it` for interactive purpose)
+  * `docker run -it -rm <name> <command>`: starts a new container to run a command, then on exit deletes the container
+
+* `docker compose build`: runs `build` for each services defined in `compose.yaml` config
+  * `docker compose build --no-cache`: forces rebuild
+* `docker compose up`: runs `build`, `pull` and `run` for each services
+  * `docker compose up --detach`: to run services in the brackground
 * `docker compose down`: stops services
   (container's ephemeral filesystem will be removed, including the files that haven't been persisted in a specific volume)
