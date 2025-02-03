@@ -42,3 +42,15 @@ sudo apt install tmux
 * `Ctrl` + `b`, `<arrow-key>`: switches to specific pane
 * `Ctrl` + `b`, `!`: breaks pane into its own window
 * `: join-pane -s <window-number>`: brings window to the pane
+
+**Copy Mode**:
+
+* `Ctrl` + `b`, `[`: Enter Copy Mode
+* `Space`: Start selection
+* `Enter`: Copy selection
+* `Ctrl` + `b`, `]`: Pastes contents of *buffer_0*
+* `q`: Quits Copy Mode (back to Normal Mode)
+* `: show-buffer`: Displays *buffer_0* contents
+* `: list-buffers`: Lists all buffers
+* `: delete-buffer-b 1`: Deletes *buffer_1*
+* `: save-buffer <filename>`: Saves buffer contents to file
