@@ -20,19 +20,19 @@ Sessions:
 
 Windows:
 
-* `Ctrl + b, c`: creates new window
-* `Ctrl + b, p`: switches to previous window
-* `Ctrl + b, n`: switches to next window
-* `Ctrl + b, <window-number>`: switches to specific window
-* `Ctrl + b, w`: lists all windows
+* `Ctrl` + `b`, `c`: creates new window
+* `Ctrl` + `b`, `p`: switches to previous window
+* `Ctrl` + `b`, `n`: switches to next window
+* `Ctrl` + `b`, `<window-number>`: switches to specific window
+* `Ctrl` + `b`, `w`: lists all windows
 
 Panes:
 
-* `Ctrl + b, %`: splits in two horizontal panes
-* `Ctrl + b, "`: splits in two vertical panes
-* `Ctrl + d`: closes pane
-* `Ctrl + b, q`: lists pane numbers
-* `Ctrl + b, <pane-number>`: switches to specific pane
-* `Ctrl + b, <arrow-key>`: switches to specific pane
-* `Ctrl + b, !`: breaks pane into its own window
-* `Ctrl + b, : join-pane -s <window-number>`: brings window to the pane
+* `Ctrl` + `b`, `%`: splits in two horizontal panes (left and right)
+* `Ctrl` + `b`, `"`: splits in two vertical panes (top / bottom)
+* `Ctrl` + `d`: closes pane
+* `Ctrl` + `b`, `q`: lists pane numbers
+* `Ctrl` + `b`, `<pane-number>`: switches to specific pane
+* `Ctrl` + `b`, `<arrow-key>`: switches to specific pane
+* `Ctrl` + `b`, `!`: breaks pane into its own window
+* `: join-pane -s <window-number>`: brings window to the pane
