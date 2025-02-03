@@ -20,9 +20,10 @@ sudo apt install tmux
 
 **Sessions**:
 
-* `tmux new-session -s <name>`: starts a new session
-* `tmux list-sessions`: lists all sessions
+* `tmux new-session -s <name>`: starts a new session (*alias: `new`*)
+* `Ctrl` + `b`, `$`: renames current session
 * `Ctrl` + `b`, `d`: detaches (exit to come back to later)
+* `tmux list-sessions`: lists all sessions (*alias: `ls`*)
 * `tmux attach-session -t <name>`: reattaches to session
 * `tmux kill-session -t <name>`: kills the session
 
@@ -32,6 +33,7 @@ sudo apt install tmux
 * `Ctrl` + `b`, `p`: switches to previous window
 * `Ctrl` + `b`, `n`: switches to next window
 * `Ctrl` + `b`, `<window-number>`: switches to specific window
+* `Ctrl` + `b`, `,`: renames current window
 * `Ctrl` + `b`, `w`: lists all windows
 
 **Panes**:
