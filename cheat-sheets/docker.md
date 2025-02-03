@@ -60,3 +60,13 @@ See:
   * `docker compose up --detach`: to run services in the brackground
 * `docker compose down`: stops services
   (container's ephemeral filesystem will be removed, including the files that haven't been persisted in a specific volume)
+
+## Maintenance
+
+* `docker images`: lists images
+  * `docker images --filter dangling=true`: lists untagged / unused images
+* `docker container ls`: lists running containers
+  * `docker container ls -a`: lists running and stopped containers
+* `docker system prune`: removes dangling containers, networks and images
+  *  `docker system prune --volumes`: removes dangling containers, networks, volumes and images
+* `docker history <image>`: Inspects layers of an image
