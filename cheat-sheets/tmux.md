@@ -10,15 +10,21 @@ Install the latest version:
 sudo apt install tmux
 ```
 
+## Modes
+
+* default: **Normal Mode**
+* `Ctrl` + `b`, `:`: **Command Mode**
+* `Ctrl` + `b`, `[`: **Copy Mode**
+
 ## Usage
 
-Sessions:
+**Sessions**:
 
 * `tmux new-session -s <name>`: starts a new session
 * `tmux list-sessions`: lists all sessions
 * `tmux kill-session -t <name>`: kills the session
 
-Windows:
+**Windows**:
 
 * `Ctrl` + `b`, `c`: creates new window
 * `Ctrl` + `b`, `p`: switches to previous window
@@ -26,7 +32,7 @@ Windows:
 * `Ctrl` + `b`, `<window-number>`: switches to specific window
 * `Ctrl` + `b`, `w`: lists all windows
 
-Panes:
+**Panes**:
 
 * `Ctrl` + `b`, `%`: splits in two horizontal panes (left and right)
 * `Ctrl` + `b`, `"`: splits in two vertical panes (top / bottom)
