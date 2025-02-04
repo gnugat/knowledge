@@ -24,7 +24,7 @@ sudo apt install tmux
 * `Ctrl` + `b`, `$`: renames current session
 * `Ctrl` + `b`, `d`: detaches (exit to come back to later)
 * `tmux list-sessions`: lists all sessions (*alias: `ls`*)
-* `tmux attach-session -t <name>`: reattaches to session
+* `tmux attach-session -t <name>`: reattaches to session (*alias: `attach`*)
 * `tmux kill-session -t <name>`: kills the session
 
 **Windows**:
