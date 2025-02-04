@@ -32,9 +32,12 @@ sudo apt install tmux
 * `Ctrl` + `b`, `c`: creates new window
 * `Ctrl` + `b`, `p`: switches to previous window
 * `Ctrl` + `b`, `n`: switches to next window
+* `Ctrl` + `b`, `l`: switches to last window
 * `Ctrl` + `b`, `<window-number>`: switches to specific window
 * `Ctrl` + `b`, `,`: renames current window
 * `Ctrl` + `b`, `w`: lists all windows
+* `Ctrl` + `b`, `&`: closes current window
+* `: swap-window -s <source-window-number> -t <target-window-number>`: swaps source and target windows
 
 **Panes**:
 
