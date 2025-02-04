@@ -49,8 +49,9 @@ See:
 
 ## Usage
 
-* `docker build -t <name>`: builds Docker images (or rebuilds if `Dockerfile` has changed)
-  * `docker build -t <name> --no-cache`: rebuilds Docker image everytime
+* `docker build -t <name> .`: builds Docker images (or rebuilds if `Dockerfile` has changed)
+  * `docker build -t <name> --no-cache .`: rebuilds Docker image everytime
+  * `docker build -t <name> -f ./Dockerfile .`: builds Docker image using given `Dockerfile`
 * `docker run -it <name> <command>`: starts a new container to run a command (`-it` for interactive purpose)
   * `docker run -it --rm <name> <command>`: starts a new container to run a command, then on exit deletes the container
 
