@@ -49,3 +49,23 @@ A highly opinionated vim cheat sheet.
 ## Misc
 
 * `Ctrl-N`: autocomplete word
+
+## Macro
+
+A macro is a registered list of keys, which can be replayed.
+
+* recording a macro:
+  * `q<character>`: start recording a marco in the register `<character>`
+    * example: `qa`, starts recording macro in register `a`
+  * `<keys>`: the list of keys to register
+    * example: `A,^[`, appends `,` at the end of the line (`^[` is Escape to quit _Insert Mode_)
+  * `q`: stops recording
+* replaying a macro:
+  * `@<character>`: replays macro from reigster `<character>`
+* editing a macro:
+  * `:new`: create a new buffer
+  * `:put <character>`: puts content from register `<character>`
+  * `<edit macro>`: for example add `j` to go to the next line
+  * `"<character>`: target register `<character>`
+  * `yy`: copy the whole line into targeted register
+* check all registers: `:reg`
