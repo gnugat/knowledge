@@ -5,7 +5,7 @@ A highly opinionated macOS cheat sheet.
 ## Finder
 
 * Navigating:
-    * `Cmd ⌘` + `Upward arrow ▲`: goes to parent folder
+    * `Cmd ⌘` + `Up ▲`: goes to parent folder
     * `Cmd ⌘` + `[`: goes to last visited folder
     * `Cmd ⌘` + `Shift ⇧` + `g`: goes to path (can use `.`, `..`, `~`)
         * `Enter ↩`: opens path
@@ -20,7 +20,7 @@ A highly opinionated macOS cheat sheet.
 ## Focus
 
 * `fn 🌐` + `a`: focuses on Dock
-    * `Upward arrow ▲`: opens contextual menu
+    * `Up ▲`: opens contextual menu
 * `fn 🌐` + `m`: focuses on Menu bar
 * `Cmd ⌘` + `l`: focuses on Browser URL bar
 
@@ -35,24 +35,24 @@ A highly opinionated macOS cheat sheet.
     * `Cmd ⌘` + `m`: minimises (docks) the window
     * `fn 🌐` + `Ctrl ^` + `f`: fills (maximises) the window
 * Tiling (one window):
-    * `fn 🌐` + `Ctrl ^` + `Leftward Arrow ◀`: tiles the window to the left
-    * `fn 🌐` + `Ctrl ^` + `Rightward Arrow ▶`: tiles the window to the right
+    * `fn 🌐` + `Ctrl ^` + `Left ◀`: tiles the window to the left
+    * `fn 🌐` + `Ctrl ^` + `Right ▶`: tiles the window to the right
 * Arranging (tiling man windows):
-    * `fn 🌐` + `Shift ⇧` + `Ctrl ^` + `Leftward Arrow ◀`: tiles two windows side by side, focus on the left
-    * `fn 🌐` + `Shift ⇧` + `Ctrl ^` + `Rightward Arrow ▶`: tiles two windows side by side, focus on the right
+    * `fn 🌐` + `Shift ⇧` + `Ctrl ^` + `Left ◀`: tiles two windows side by side, focus on the left
+    * `fn 🌐` + `Shift ⇧` + `Ctrl ^` + `Right ▶`: tiles two windows side by side, focus on the right
 
 ## Mission Control / Spaces
 
-* `Ctrl ^` + `Upward arrow ▲`: opens Mission Control
-* `Ctrl ^` + `Leftward Arrow ◀`: goes to the leftward space
-* `Ctrl ^` + `Rightward Arrow ▶`: goes to the rightward space
+* `Ctrl ^` + `Up ▲`: opens Mission Control
+* `Ctrl ^` + `Left ◀`: goes to the leftward space
+* `Ctrl ^` + `Right ▶`: goes to the rightward space
 
 ## Paging
 
-* `fn 🌐` + `Upward arrow ▲`: scrolls up
-* `fn 🌐` + `Downward arrow ▼`: scrolls down
-* `fn 🌐` + `Leftward Arrow ◀`: scrolls to the top
-* `fn 🌐` + `Rightward Arrow ▶`: scrolls to the end
+* `fn 🌐` + `Up ▲`: scrolls up
+* `fn 🌐` + `Down ▼`: scrolls down
+* `fn 🌐` + `Left ◀`: scrolls to the top
+* `fn 🌐` + `Right ▶`: scrolls to the end
 
 ## Spotlight
 
@@ -70,6 +70,6 @@ A highly opinionated macOS cheat sheet.
 ## Screenshots
 
 * `Cmd ⌘` + `Shift ⇧` + `3`: captures the entire screen
-* `Cmd ⌘` + `Shift ⇧` + `3`: captures a selection
+* `Cmd ⌘` + `Shift ⇧` + `4`: captures a selection
 * `Cmd ⌘` + `Shift ⇧` + `5`: opens screeshot options
     * _Note_: in `Options` you can change where to save by default (eg `Screenshots` folder instead of `Desktop`)
