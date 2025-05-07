@@ -33,7 +33,7 @@ Source: [What's new in PHP 8.3](https://stitcher.io/blog/new-in-php-83) from [Br
 ## PHP 8.2
 
 * [`readonly` classes](https://wiki.php.net/rfc/readonly_classes) 😡
-* [`bool`, `false`, `null` typehints](https://wiki.php.net/rfc/null-false-standalone-types)
+* [`true`, `false`, `null` typehints](https://wiki.php.net/rfc/null-false-standalone-types)
 * [`#[\SensitiveParameter]` attribute](https://wiki.php.net/rfc/redact_parameters_in_back_traces)
 
 Source: [What's new in PHP 8.2](https://stitcher.io/blog/new-in-php-82) from [Brent Roose](https://github.com/brendt)
