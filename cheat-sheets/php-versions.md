@@ -8,6 +8,7 @@ A highly opinionated PHP versions cheat sheet:
 * [PHP 8.1](#php-81)
 * [PHP 8.0](#php-80)
 * [PHP 7.4](#php-74)
+* [PHP 7.3](#php-73)
 
 ## PHP 8.4
 
@@ -81,3 +82,12 @@ Also check:
 Source: [What's new in PHP 7.4](https://stitcher.io/blog/new-in-php-74) from [Brent Roose](https://github.com/brendt)
 Also check:
 * [Arrow functions in PHP 7.4](https://stitcher.io/blog/short-closures-in-php)
+
+## PHP 7.3
+
+* [trailing commas in function calls](https://wiki.php.net/rfc/trailing-comma-function-calls) 💙
+* [indentable HEREDOC syntax](https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes) 💙
+* [`array_key_first(array $array): int|string|null`](https://wiki.php.net/rfc/array_key_first_last) 💙
+* [`array_key_last(array $array): int|string|null`](https://wiki.php.net/rfc/array_key_first_last) 💙
+
+Source: [What's new in PHP 7.3](https://stitcher.io/blog/new-in-php-73) from [Brent Roose](https://github.com/brendt)
