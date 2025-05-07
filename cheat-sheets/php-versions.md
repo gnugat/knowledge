@@ -2,11 +2,25 @@
 
 A highly opinionated PHP versions cheat sheet:
 
+* [PHP 8.4](#php-84)
 * [PHP 8.3](#php-83)
 * [PHP 8.2](#php-82)
 * [PHP 8.1](#php-81)
 * [PHP 8.0](#php-80)
 * [PHP 7.4](#php-74)
+
+## PHP 8.4
+
+* [`#[\Deprecated]` attribute](https://wiki.php.net/rfc/deprecated_attribute)
+* [`array_find(array $array, callable $callback): mixed`](https://wiki.php.net/rfc/array_find)
+* [`array_find_key(array $array, callable $callback): mixed`](https://wiki.php.net/rfc/array_find)
+* [`array_any(array $array, callable $callback): bool`](https://wiki.php.net/rfc/array_find)
+* [`array_all(array $array, callable $callback): bool`](https://wiki.php.net/rfc/array_find)
+* [`new` without parenthesis](https://wiki.php.net/rfc/new_without_parentheses)
+* [property hooks]([https://wiki.php.net/rfc/negative_array_index](https://wiki.php.net/rfc/property-hooks) 🤨
+* [asymmetric visibility](https://wiki.php.net/rfc/asymmetric-visibility-v2) 🤨
+
+Source: [What's new in PHP 8.4](https://stitcher.io/blog/new-in-php-84) from [Brent Roose](https://github.com/brendt)
 
 ## PHP 8.3
 
