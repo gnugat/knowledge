@@ -47,7 +47,8 @@ Also check:
 * [`::class` on object instances](https://wiki.php.net/rfc/class_name_literal_on_object)
 * [trailing comma in parameter list](https://wiki.php.net/rfc/trailing_comma_in_parameter_list) 💙
 * [`str_contains(string $haystack, string $needle): bool`](https://wiki.php.net/rfc/str_contains)
-* [`str_starts_with(string $haystack, string $needle): bool` and `str_ends_with(string $haystack, string $needle): bool`](https://wiki.php.net/rfc/add_str_starts_with_and_ends_with_functions)
+* [`str_starts_with(string $haystack, string $needle): bool`](https://wiki.php.net/rfc/add_str_starts_with_and_ends_with_functions)
+* [`str_ends_with(string $haystack, string $needle): bool`](https://wiki.php.net/rfc/add_str_starts_with_and_ends_with_functions)
 * [`ext-json` always installed](https://wiki.php.net/rfc/always_enable_json)
 
 Source: [What's new in PHP 8](https://stitcher.io/blog/new-in-php-8) from [Brent Roose](https://github.com/brendt)
