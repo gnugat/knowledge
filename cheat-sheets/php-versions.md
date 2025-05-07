@@ -17,7 +17,7 @@ A highly opinionated PHP versions cheat sheet:
 * [`array_any(array $array, callable $callback): bool`](https://wiki.php.net/rfc/array_find)
 * [`array_all(array $array, callable $callback): bool`](https://wiki.php.net/rfc/array_find)
 * [`new` without parenthesis](https://wiki.php.net/rfc/new_without_parentheses)
-* [property hooks]([https://wiki.php.net/rfc/negative_array_index](https://wiki.php.net/rfc/property-hooks) 🤨
+* [property hooks](https://wiki.php.net/rfc/property-hooks) 🤨
 * [asymmetric visibility](https://wiki.php.net/rfc/asymmetric-visibility-v2) 🤨
 
 Source: [What's new in PHP 8.4](https://stitcher.io/blog/new-in-php-84) from [Brent Roose](https://github.com/brendt)
