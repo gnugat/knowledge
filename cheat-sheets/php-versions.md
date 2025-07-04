@@ -2,6 +2,7 @@
 
 A highly opinionated PHP versions cheat sheet:
 
+* [PHP 8.5](#php-85)
 * [PHP 8.4](#php-84)
 * [PHP 8.3](#php-83)
 * [PHP 8.2](#php-82)
@@ -9,6 +10,12 @@ A highly opinionated PHP versions cheat sheet:
 * [PHP 8.0](#php-80)
 * [PHP 7.4](#php-74)
 * [PHP 7.3](#php-73)
+
+## PHP 8.5 (alpha)
+
+* [`array_first(array $array): mixed`](https://wiki.php.net/rfc/array_first_last)
+* [`array_last(array $array): mixed`](https://wiki.php.net/rfc/array_first_last)
+* [`|>` pipe operator](https://wiki.php.net/rfc/pipe-operator-v3)
 
 ## PHP 8.4
 
