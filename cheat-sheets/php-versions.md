@@ -26,7 +26,7 @@ Sources:
 
 ## PHP 8.4
 
-* [`#[\Deprecated]` attribute](https://wiki.php.net/rfc/deprecated_attribute)
+* [`#[\Deprecated]` attribute](https://wiki.php.net/rfc/deprecated_attribute) 💙
 * [`array_find(array $array, callable $callback): mixed`](https://wiki.php.net/rfc/array_find)
 * [`array_find_key(array $array, callable $callback): mixed`](https://wiki.php.net/rfc/array_find)
 * [`array_any(array $array, callable $callback): bool`](https://wiki.php.net/rfc/array_find)
@@ -39,17 +39,17 @@ Source: [What's new in PHP 8.4](https://stitcher.io/blog/new-in-php-84) from [Br
 
 ## PHP 8.3
 
-* [typed class constants](https://wiki.php.net/rfc/typed_class_constants) 💙
-* [`#[\Override]` attribute for methods](https://wiki.php.net/rfc/marking_overriden_methods)
+* [typed class constants](https://wiki.php.net/rfc/typed_class_constants) 💙💙
+* [`#[\Override]` attribute for methods](https://wiki.php.net/rfc/marking_overriden_methods) 💙
 * [negative array indices](https://wiki.php.net/rfc/negative_array_index)
 
 Source: [What's new in PHP 8.3](https://stitcher.io/blog/new-in-php-83) from [Brent Roose](https://github.com/brendt)
 
 ## PHP 8.2
 
-* [`readonly` classes](https://wiki.php.net/rfc/readonly_classes) 😡
+* [`readonly` classes](https://wiki.php.net/rfc/readonly_classes) 💙💙
 * [`true`, `false`, `null` typehints](https://wiki.php.net/rfc/null-false-standalone-types)
-* [`#[\SensitiveParameter]` attribute](https://wiki.php.net/rfc/redact_parameters_in_back_traces)
+* [`#[\SensitiveParameter]` attribute](https://wiki.php.net/rfc/redact_parameters_in_back_traces) 💙
 
 Source: [What's new in PHP 8.2](https://stitcher.io/blog/new-in-php-82) from [Brent Roose](https://github.com/brendt)
 
@@ -68,13 +68,13 @@ Also check:
 * [union types](https://wiki.php.net/rfc/union_types_v2) 😐
 * [nullsafe operator](https://wiki.php.net/rfc/nullsafe_operator)
 * [named parameters](https://wiki.php.net/rfc/named_params) 💙
-* [attributes](https://wiki.php.net/rfc/attributes_v2)
+* [attributes](https://wiki.php.net/rfc/attributes_v2) 💙
 * [`match` expression](https://wiki.php.net/rfc/match_expression_v2)
-* [constructor property promotion](https://wiki.php.net/rfc/constructor_promotion) 💙
+* [constructor property promotion](https://wiki.php.net/rfc/constructor_promotion) 💙💙
 * [`static` return type](https://wiki.php.net/rfc/static_return_type)
 * [`mixed` return type](https://wiki.php.net/rfc/mixed_type_v2)
 * [`::class` on object instances](https://wiki.php.net/rfc/class_name_literal_on_object)
-* [trailing comma in parameter list](https://wiki.php.net/rfc/trailing_comma_in_parameter_list) 💙
+* [trailing comma in parameter list](https://wiki.php.net/rfc/trailing_comma_in_parameter_list) 💙💙
 * [`str_contains(string $haystack, string $needle): bool`](https://wiki.php.net/rfc/str_contains)
 * [`str_starts_with(string $haystack, string $needle): bool`](https://wiki.php.net/rfc/add_str_starts_with_and_ends_with_functions)
 * [`str_ends_with(string $haystack, string $needle): bool`](https://wiki.php.net/rfc/add_str_starts_with_and_ends_with_functions)
@@ -89,7 +89,7 @@ Also check:
 ## PHP 7.4
 
 * [arrow functions](https://wiki.php.net/rfc/arrow_functions_v2)
-* [typed class properties](https://wiki.php.net/rfc/typed_properties_v2) 💙
+* [typed class properties](https://wiki.php.net/rfc/typed_properties_v2) 💙💙
 * [null coalescing assignment operator](https://wiki.php.net/rfc/null_coalesce_equal_operator)
 * [`...` array spread operator](https://wiki.php.net/rfc/spread_operator_for_array)
 
@@ -99,7 +99,7 @@ Also check:
 
 ## PHP 7.3
 
-* [trailing commas in function calls](https://wiki.php.net/rfc/trailing-comma-function-calls) 💙
+* [trailing commas in function calls](https://wiki.php.net/rfc/trailing-comma-function-calls) 💙💙
 * [indentable HEREDOC syntax](https://wiki.php.net/rfc/flexible_heredoc_nowdoc_syntaxes) 💙
 * [`array_key_first(array $array): int|string|null`](https://wiki.php.net/rfc/array_key_first_last) 💙
 * [`array_key_last(array $array): int|string|null`](https://wiki.php.net/rfc/array_key_first_last) 💙
