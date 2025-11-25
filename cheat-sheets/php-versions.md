@@ -11,11 +11,18 @@ A highly opinionated PHP versions cheat sheet:
 * [PHP 7.4](#php-74)
 * [PHP 7.3](#php-73)
 
-## PHP 8.5 (alpha)
+## PHP 8.5
 
+* [use `final` in constructor property promotion](https://wiki.php.net/rfc/final_promotion) 💙
 * [`array_first(array $array): mixed`](https://wiki.php.net/rfc/array_first_last)
 * [`array_last(array $array): mixed`](https://wiki.php.net/rfc/array_first_last)
 * [`|>` pipe operator](https://wiki.php.net/rfc/pipe-operator-v3)
+* [`#[\Override]` attribute for properties](https://wiki.php.net/rfc/override_properties) 💙
+* [Persistent cURL Handles for DNS, Connection, and SSL Handshake Reuse](https://wiki.php.net/rfc/curl_share_persistence_improvement)
+
+Sources:
+* [What's new in PHP 8.5](https://stitcher.io/blog/new-in-php-85) from [Brent Roose](https://github.com/brendt)
+* [What’s new in PHP 8.5 in terms of performance, debugging and operations](https://tideways.com/profiler/blog/whats-new-in-php-8-5-in-terms-of-performance-debugging-and-operations) from [Benjamin Eberlei](https://github.com/beberlei)
 
 ## PHP 8.4
 
@@ -33,7 +40,7 @@ Source: [What's new in PHP 8.4](https://stitcher.io/blog/new-in-php-84) from [Br
 ## PHP 8.3
 
 * [typed class constants](https://wiki.php.net/rfc/typed_class_constants) 💙
-* [`#[\Override]` attribute](https://wiki.php.net/rfc/marking_overriden_methods)
+* [`#[\Override]` attribute for methods](https://wiki.php.net/rfc/marking_overriden_methods)
 * [negative array indices](https://wiki.php.net/rfc/negative_array_index)
 
 Source: [What's new in PHP 8.3](https://stitcher.io/blog/new-in-php-83) from [Brent Roose](https://github.com/brendt)
