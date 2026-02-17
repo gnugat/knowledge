@@ -16,7 +16,7 @@ A highly opinionated PostgreSQL cheat sheet.
 
 Make sure you don't have a transaction that's been running for two months or something:
 
-```
+```sql
 SELECT 
   pid,
   usename,
@@ -28,3 +28,31 @@ FROM pg_stat_activity
 WHERE xact_start IS NOT NULL
 ORDER BY xact_start ASC;
 ```
+
+_Reference: [Thomas Florelli](https://github.com/thomasflorelli)_
+
+## Autovacuum health check
+
+Identify tables accumulating dead tuples:
+
+```sql
+SELECT
+  relname,
+  last_autovacuum,
+  ROUND(n_dead_tup::numeric / NULLIF(n_live_tup, 0), 2) AS dead_ratio,
+  n_dead_tup
+FROM pg_stat_user_tables
+ORDER BY dead_ratio DESC;
+```
+
+> _Note_:
+>
+> On UPDATE / DELETE, the old version of the row becomes "dead", yet they still:
+>
+> - take disk space
+> - increase index size
+> - slow down scans
+>
+> That is, until VACUUM removes them. Which will NOT happen if a transaction is still running.
+
+_Reference: [Thomas Florelli](https://github.com/thomasflorelli)_
