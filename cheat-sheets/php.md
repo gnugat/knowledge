@@ -2,15 +2,12 @@
 
 A highly opinionated PHP cheat sheet.
 
-* [latest version on Ubuntu](#latest-version-on-ubuntu)
+* [config](#config)
 * [array_merge](#array_merge)
+* [latest version on Ubuntu](#latest-version-on-ubuntu)
 
-## Latest version on Ubuntu
+## Config
 
-* adding PPA: `sudo add-apt-repository ppa:ondrej/php -y; sudo apt-get update`
-* removing current version: `sudo apt-get purge php* php*-fpm && sudo apt-get --purge autoremove`
-* installing latest version (replace `X` with the latest version, eg `7.3`):
-  `PHP_VERSION='X'; sudo apt-get install php$PHP_VERSION php$PHP_VERSION-curl php$PHP_VERSION-intl php$PHP_VERSION-pgsql php$PHP_VERSION-json php$PHP_VERSION-mbstring php$PHP_VERSION-zip php$PHP_VERSION-xml php$PHP_VERSION-fom apache2- apache2-bin-`
 Settings that usually need to be overwritten in `/etc/php/$PHP_VERSION/*/conf.d/99-custom.ini`:
 
 ```
@@ -77,3 +74,11 @@ _References:_
 * [PHP: Array operators](http://php.net/manual/en/language.operators.array.php)
 * [PHP: `array_merge`](http://php.net/manual/en/function.array-merge.php)
 * [PHP: `array_merge` splat operator comment](https://www.php.net/manual/en/function.array-merge.php#121023)
+
+## Latest version on Ubuntu
+
+* adding PPA: `sudo add-apt-repository ppa:ondrej/php -y; sudo apt-get update`
+* removing current version: `sudo apt-get purge php* php*-fpm && sudo apt-get --purge autoremove`
+* installing latest version (replace `X` with the latest version, eg `7.3`):
+  `PHP_VERSION='X'; sudo apt-get install php$PHP_VERSION php$PHP_VERSION-curl php$PHP_VERSION-intl php$PHP_VERSION-pgsql php$PHP_VERSION-json php$PHP_VERSION-mbstring php$PHP_VERSION-zip php$PHP_VERSION-xml php$PHP_VERSION-fom apache2- apache2-bin-`
+
