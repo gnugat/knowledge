@@ -8,10 +8,26 @@ A highly opinionated [phpdoc](http://www.phpdoc.org/) cheat sheet.
 
 ## Types
 
-* `int`
-* `bool`
-* `float`
-* `<type>[]`
+* `int`, `bool`, `float`, `string`
+* `?type` or `type|null`: nullable (eg `?string`)
+* `class-string<T>`: fully qualified class name (eg `class-string<\Throwable>`)
+* `<type>[]`: array of given type (eg `string[]`)
+* `list<type>`: sequential array indexed from 0 (eg `list<string>`)
+* `array{key: type}`: array with specific named keys (eg `array{name: string, age: int}`)
+* `list<array{key: type}>`: list of shaped arrays (eg `list<array{name: string, age: int}>`)
+* `\Iterator<type>`: iterator (eg `\Iterator<array{name: string}>`)
+
+Array shapes are useful to type SQL query results:
+
+```php
+/**
+ * @var list<array{
+ *     username: string,
+ *     love_points: int,
+ * }> $rows
+ */
+$rows = $stmt->fetchAll();
+```
 
 ## Tags
 
