@@ -1,180 +1,257 @@
 # PHPUnit cheat sheet
 
-A highly opinionated [PHPUnit](http://phpunit.de/) cheat sheet.
-
-* [Assertions](#assertions)
-* [Annotations](#annotations)
-* [Test doubles](#test-doubles)
-    * [Stub](#stub)
-    * [Mock](#mock)
-* [Set up and tear down](#set-up-and-tear-down)
-* [Usage](#usage)
-* [Resources](#resources) 
+A highly opinionated [PHPUnit](https://phpunit.de/) cheat sheet.
 
 ## Assertions
 
-Prototype: `self::assertX($expected, $actual, $message = '')`
+Prototype: `$this->assertX($expected, $actual, $message = '')`
 
 * `assertSame`: strict equality (`===`)
 * `assertEquals`: loose equality (`==`)
-* `assertTrue`
-* `assertFalse`
+* `assertTrue`, `assertFalse`
 * `assertInstanceOf`
 
-For exceptions:
+Exceptions:
 
-* `$this->expectException(\Exception::class)`
+* `expectException(\Exception::class)`: should throw exception `\Exception`
+* `expectNotToPerformAssertions()`: should not throw exception
 
-## Annotations
+## Attributes
 
-* `@test`: to avoid `test` prefix on test methods
-* `@group <name>`: to be used with `phpunit --group <name>`
+Attributes (`#[<Name>]`) replace Annotations (PHPDoc `@<Name>`),
+deprecated in PHPUnit 10, removed in PHPUnit 12.
+
+Specify targeted class:
+
+* `#[CoversClass(MyClass::class)]`: enforces test boundaries, prevents accidental coverage
+* `#[UsesClass(OtherClass::class)]`: if code from other classes is expected to be used
+
+Categorize tests:
+
+* `#[Small]`: unit tests (under 100ms)
+* `#[Medium]`: integration tests (under 1s)
+* `#[Large]`: end to end tests (over 1s)
+* `#[Group('wip')]`: arbitrary categories
+
+Data providers:
+
+* `#[DataProvider('methodName')]`: for a static method in the test class
+* `#[DataProviderExternal(ClassName::class, 'methodName')]`: for a static method in a different class
+* `#[TestWith([data])]`: inline, without declaring a static method
+
+## Factory methods
+
+Prefer private factory methods over `setUp()` to create the System Under Test (SUT):
+
+* `setUp()` runs before every test, even those that don't need it
+* test class properties, once instantiated, are kept in memory until the end of the testsuite run
+* factory methods use local variables that are freed after each test
+
+> **⚠️ PHPUnit creates one instance of each test class per test method and per data provider row,
+> and keeps them all in memory until the testsuite completes.**
+
+```php
+#[CoversClass(Username::class)]
+#[Small]
+final class UsernameTest extends TestCase
+{
+    private function username(string $value = 'Merlin'): Username
+    {
+        return Username::fromString($value);
+    }
+
+    #[TestDox('It can be converted from/to string')]
+    public function test_it_can_be_converted_from_and_to_string(): void
+    {
+        $this->assertSame('Merlin', $this->username()->toString());
+    }
+
+    #[DataProvider('invalidUsernameProvider')]
+    #[TestDox('It fails when raw username $scenario')]
+    public function test_it_fails_when_raw_username_is_invalid(
+        string $scenario,
+        string $invalidUsername,
+    ): void {
+        $this->expectException(ValidationFailedException::class);
+        $this->username($invalidUsername);
+    }
+
+    /**
+     * @return \Iterator<array{
+     *     scenario: string,
+     *     invalidUsername: string,
+     * }>
+     */
+    public static function invalidUsernameProvider(): \Iterator
+    {
+        yield ['scenario' => 'is empty', 'invalidUsername' => ''];
+        yield ['scenario' => 'is too short (< 4 characters)', 'invalidUsername' => 'abc'];
+        yield ['scenario' => 'is too long (> 15 characters)', 'invalidUsername' => 'abcdefghijklmnop'];
+    }
+}
+```
+
+Output with `--testdox`:
+
+```
+Username
+ ✔ It can be converted from/to string
+ ✔ It fails when raw username is empty
+ ✔ It fails when raw username is too short (< 4 characters)
+ ✔ It fails when raw username is too long (> 15 characters)
+```
 
 ## Test doubles
 
-### Stub
+DTOs and Value Objects don't need test doubles: they're immutable data containers,
+use real instances instead.
+
+### Prophecy
+
+When the SUT creates values internally, use Argument matchers:
+
+* `Argument::type(ClassName::class)`: matches by type
+* `Argument::that(static fn ($v): bool => ...)`: matches with a custom closure
+* `Argument::any()`: matches anything
 
 ```php
-$stub = $this->prophesize(SomeClass::class);
+use Prophecy\Argument;
+use Prophecy\PhpUnit\ProphecyTrait;
 
-$stub->doSomething()->willReturn('foo');
-$stub->doSomething()->willThrow(\Exception::class);
-```
-
-### Mock
-
-```php
-$mock = $this->prophesize(SomeClass::class);
-
-$mock->doSomething('something')->shouldBeCalled();
-$mock->doSomething('something')->shouldBeCalledTimes(2);
-```
-
-## Set up and tear down
-
-```php
-<?php
-
-class MyUnitTest extends PHPUnit_Framework_TestCase
+#[CoversClass(SignInPlayerHandler::class)]
+#[Small]
+final class SignInPlayerHandlerTest extends TestCase
 {
-    public static function setUpBeforeClass()
+    use ProphecyTrait;
+
+    public function test_it_signs_in_player(): void
     {
-        // Executed once before the first *test* method
-    }
-    
-    protected function setUp()
-    {
-        // Executed before every *test* method
-    }
-    
-    protected function tearDown()
-    {
-        // Executed after every *test* method
-    }
-    
-    public static function tearDownBeforeClass()
-    {
-        // Executed once after the last *test* method
+        $username = UsernameFixture::makeString();
+        $player = PlayerFixture::make();
+
+        // Stub: configure return value
+        $findPlayer = $this->prophesize(FindPlayer::class);
+        $findPlayer->find(
+            Argument::that(static fn (Username $u): bool => $u->toString() === $username),
+        )->willReturn($player);
+
+        // Mock: assert it gets called
+        $saveAuthToken = $this->prophesize(SaveAuthToken::class);
+        $saveAuthToken->save(Argument::type(AuthToken::class))
+            ->shouldBeCalled();
+
+        $signInPlayerHandler = new SignInPlayerHandler(
+            $findPlayer->reveal(),
+            $saveAuthToken->reveal(),
+        );
+        $signedInPlayer = $signInPlayerHandler->run(new SignInPlayer(
+            $username,
+        ));
+
+        $this->assertInstanceOf(SignedInPlayer::class, $signedInPlayer);
     }
 }
 ```
 
-## Usage
+## Smoke tests
 
-PHPUnit can be used for system tests, which allow you to check that an entry point of the application works as expected.
-
-It can be achieved by:
-
-1. defining an application input (Request, or Input)
-2. asking the application to handle this input and retrieving its output (Response, exit code)
-3. checking the status:
-    * for web page, simply check that the response status code is 200
-    * for APIs, check the exact status code
-    * for CLI commands, check that the status code is 0
-
-Its advantages:
-
-* better coverage (checks that unit interacts as expected between each other)
-* easy to write
-
-Its drawbacks:
-
-* usually slow to execute (can involve filesystem operations, database transactions and network requests)
-
-### Example
-
-Using Symfony and PHPUnit:
+For controllers and commands, craft the input, pass it to the application,
+and verify the status code. Use `#[CoversNothing]` as smoke tests don't target a specific class:
 
 ```php
-<?php
- 
-namespace tests\AppBundle\Controller;
-
-use Symfony\Component\HttpFoundation\Request;
- 
-class FortuneControllerTest extends \PHPUnit_Framework_TestCase
+#[CoversNothing]
+#[Medium]
+final class SignUpNewPlayerControllerTest extends TestCase
 {
-    private \AppKernel $app;
+    public function test_it_signs_up_a_new_player(): void
+    {
+        $appKernel = TestKernelSingleton::get()->appKernel();
 
-    protected function setUp()
-    {
-        $this->app = new \AppKernel('test', false);
-        $this->app->boot();
-    }
- 
-    /**
-     * @test
-     */
-    public function it_lists_all_quotes()
-    {
-        $request = Request::create('/v1/fortunes', 'GET');
- 
-        $response = $this->app->handle($request);
-        $this->app->terminate($request, $response);
- 
-        self::assertSame(200, $response->getStatuCode(), $response->getContent());
+        $request = Request::create(
+            uri: '/api/v1/actions/sign-up-new-player',
+            method: 'POST',
+            server: ['CONTENT_TYPE' => 'application/json'],
+            content: json_encode([
+                'username' => UsernameFixture::makeString(),
+                'password' => PasswordPlainFixture::makeString(),
+            ], \JSON_THROW_ON_ERROR),
+        );
+
+        $response = $appKernel->handle($request);
+
+        $this->assertSame(Response::HTTP_CREATED, $response->getStatusCode(), (string) $response->getContent());
     }
 }
 ```
 
-And to test commands:
+## CLI options
 
-```php
-<?php
- 
-namespace tests\AppBundle\Command;
- 
-use Symfony\Bundle\FrameworkBundle\Console\Application;
-use Symfony\Component\Console\Tester\ApplicationTester;
+```console
+phpunit
 
-class SubmitNewQuoteCommandTest extends \PHPUnit_Framework_TestCase
-{
-    private ApplicationTester $applicationTester;
+  # Selection:
+  --group small                        Only run tests from the specified group(s)
+  --covers 'Username'                  Only run tests that intend to cover <name>
+  --filter 'UsernameTest'              Filter which tests to run
+  --testsuite unit                     Only run tests from the specified testsuite(s)
 
-    protected function __construct()
-    {
-        $kernel = new \AppKernel('test');
-        $kernel->boot();
-        $application = new Application($kernel);
-        $this->applicationTester = new ApplicationTester($application);
-    }
- 
-    /**
-     * @test
-     */
-    public function it_submits_a_new_quote()
-    {
-        $exitCode = $this->applicationTester->run([
-            'quote:submit',
-            'quote' => 'Nobody expects the Spanish Inquisition!',
-        ]);
+  # Execution:
+  --stop-on-failure                    Stop after first failure
+  --order-by <order>                   default|defects|depends|duration|random|size
 
-        self::assertSame(0, $exitCode, $this->applicationTester->getDisplay());
-    }
-}
+  # Reporting:
+  --testdox                            Replace default result output with TestDox format
+```
+
+## Configuration
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+
+         cacheDirectory=".phpunit.cache"
+         executionOrder="depends,defects"
+         requireCoverageMetadata="true"
+         beStrictAboutCoverageMetadata="true"
+         beStrictAboutOutputDuringTests="true"
+         displayDetailsOnPhpunitDeprecations="true"
+         failOnPhpunitDeprecation="true"
+         failOnRisky="true"
+         failOnWarning="true"
+
+         shortenArraysForExportThreshold="10"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="integration">
+            <directory>tests/Integration</directory>
+        </testsuite>
+    </testsuites>
+
+    <source
+        ignoreIndirectDeprecations="true"
+        restrictNotices="true"
+        restrictWarnings="true"
+    >
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+</phpunit>
 ```
 
 ## Resources
 
-* [Questioning PHPUnit best practices](https://thephp.cc/news/2016/02/questioning-phpunit-best-practices)
-* [PHPUnit and prophecy](https://thephp.cc/news/2015/02/phpunit-4-5-and-prophecy)
+* [So you think you know PHPUnit - Sebastian Bergmann - PHPDD2024](https://www.youtube.com/watch?v=qwRdnoeq1H8) ([article](https://phpunit.expert/articles/phpunit-features-that-surprise-even-professionals.html))
+* [Optimizing Your Test Suite - Sebastian Bergmann - PHP fwdays 2021](https://www.youtube.com/watch?v=wR6YflVkAt4)
+* [Sebastian's raytracer project](https://github.com/sebastianbergmann/raytracer/)
+* [Testing with(out) dependencies - Sebastian Bergmann](https://www.youtube.com/watch?v=d3qXBEBNjHc) ([article](https://phpunit.expert/articles/testing-with-and-without-dependencies.html))
+* [Testing with DTOs and Value Objects - Sebastian Bergmann](https://phpunit.expert/articles/testing-with-data-transfer-objects-and-value-objects.html)
+* [How I manage test fixture - Sebastian Bergmann](https://phpunit.expert/articles/how-i-manage-test-fixture.html)
+* [Do Not Mock What You Do Not Own - Sebastian Bergmann](https://thephp.cc/articles/do-not-mock-what-you-do-not-own)
+* [PHPUnit documentation](https://phpunit.de/documentation.html)
