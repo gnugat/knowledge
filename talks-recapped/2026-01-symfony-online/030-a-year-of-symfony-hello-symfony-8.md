@@ -13,7 +13,7 @@
 Speaker: Nicolas Grekas
 * [Twitter/X profile](https://twitter.com/nicolasgrekas)
 
-![Title slide](./a-year-of-symfony-hello-symfony-8/00-title.png)
+![Title slide](./030-a-year-of-symfony-hello-symfony-8/00-title.png)
 
 ## Recap
 
@@ -21,7 +21,7 @@ Nicolas Grekas' talk offers a brisk tour of the last six months of Symfony devel
 The key framing is that Symfony 8 is intentionally "boring": all the new features landed in 7.4, and 8.0 is about removing deprecated code, requiring PHP 8.4, and benefiting from its quality-of-life improvements such as native lazy objects and improved type safety.
 One notable exception to the "no new features" rule: versions ending in `.4` don't get new components, so 8.0 is where the new components land.
 
-![Changes in the last 6 months slide](./a-year-of-symfony-hello-symfony-8/01-changes.png)
+![Changes in the last 6 months slide](./030-a-year-of-symfony-hello-symfony-8/01-changes.png)
 
 The numbers illustrate the pace: in just six months, Symfony 8 accumulated 4k files changed, +188/-78 features, 475 minor improvements, 513 merged PRs, and 342 bug fixes (and that's excluding the addition of the emoji database).
 
@@ -32,7 +32,7 @@ JsonStreamer instead generates PHP code that reads or writes JSON in a streaming
 
 The public API is built around three interfaces (`StreamWriterInterface`, `StreamReaderInterface`, and `ValueTransformerInterface`), but for most use cases the entry point is simply annotating a DTO with `#[JsonStreamable]`.
 
-![JsonStreamer slide](./a-year-of-symfony-hello-symfony-8/02-json-streamer.png)
+![JsonStreamer slide](./030-a-year-of-symfony-hello-symfony-8/02-json-streamer.png)
 
 The performance gains are significant: serialization is around 10x faster than the Serializer component with 50% less memory, and deserialization is around 10x faster with 90% less memory.
 In practice, API Platform reported that the share of request time spent on serialization dropped from 83% to 45% after adopting it.
@@ -73,7 +73,7 @@ All results are returned as arrays.
 The `ObjectMapper` component handles the common task of transferring data between objects of different classes, typically DTOs crossing the boundary between layers of an application.
 Rather than writing manual mapping code property by property, the `#[Map]` attribute on the source class describes how each property should be transferred.
 
-![ObjectMapper slide](./a-year-of-symfony-hello-symfony-8/03-object-mapper.png)
+![ObjectMapper slide](./030-a-year-of-symfony-hello-symfony-8/03-object-mapper.png)
 
 The class-level `#[Map]` attribute declares the target class.
 At the property level, `target` renames the destination property, `transform` applies a callable before writing (e.g. `strtolower`), and `if` makes mapping conditional at runtime.
@@ -93,12 +93,12 @@ In the simple form, `#[Argument]` and `#[Option]` go directly on the `__invoke` 
 
 For richer interaction, the talk highlights the DTO approach: `__invoke` accepts a single DTO annotated with `#[MapInput]` (which tells Symfony to populate it from the command's input), and all the argument/option/prompt declarations live on the DTO's properties.
 
-![Commands using attributes slide](./a-year-of-symfony-hello-symfony-8/04-command-attributes.png)
+![Commands using attributes slide](./030-a-year-of-symfony-hello-symfony-8/04-command-attributes.png)
 
 `#[Argument]` maps a property to a positional argument, `#[Ask]` attaches a prompt label (with an optional `hidden: true` for passwords), and `#[Interact]` marks a public method to run during the interaction phase (replacing the previous `extend Command` + override `interact()` pattern).
 The example shown generates a random password and copies it to the clipboard when the user skips that field.
 
-![Commands DTO slide](./a-year-of-symfony-hello-symfony-8/05-commands-dto.png)
+![Commands DTO slide](./030-a-year-of-symfony-hello-symfony-8/05-commands-dto.png)
 
 `#[Argument]` and `#[Option]` also accept backed enums: the user's input string is automatically converted to the corresponding enum case, and an invalid value produces a clear error listing all supported values.
 
@@ -109,7 +109,7 @@ The classic `Command` extension approach is not deprecated; both styles coexist.
 
 A new `#[AutowireMethodOf]` attribute allows a controller (or any service) to inject individual methods of a helper class as `\Closure` instances, rather than injecting the whole helper class.
 
-![Controller inject method of slide](./a-year-of-symfony-hello-symfony-8/06-controller-inject-method-of.png)
+![Controller inject method of slide](./030-a-year-of-symfony-hello-symfony-8/06-controller-inject-method-of.png)
 
 This is an alternative to extending `AbstractController`: instead of inheriting `render()` and `redirectToRoute()` from a parent, a controller explicitly declares which helper methods it needs.
 The result is less coupling to the controller infrastructure and more expressive dependency declarations.
@@ -119,7 +119,7 @@ The result is less coupling to the controller infrastructure and more expressive
 The Dependency Injection container has always scanned the source tree to discover services, but it ignored value objects since they are not meant to be wired as services.
 A new `Definition::addResourceTag()` method makes it possible to register a scan for those classes and attach tags to them.
 
-![Auto-discover value objects slide](./a-year-of-symfony-hello-symfony-8/07-autodiscover-value-objects.png)
+![Auto-discover value objects slide](./030-a-year-of-symfony-hello-symfony-8/07-autodiscover-value-objects.png)
 
 The immediate benefit is that bundles like Doctrine ORM can use this mechanism to automatically discover Entity classes without any additional configuration.
 As Ryan Weaver commented on the PR: _"I can't wait to see what we do with `#[AppModel]`!! This one seems subtle but we're gonna feel its impact!"_
@@ -130,21 +130,21 @@ Symfony has historically supported XML, YAML, and PHP as configuration formats.
 The talk signals a deliberate consolidation: XML was deprecated in Symfony 7.4 and removed entirely in 8.0 (with the `ext-xml` requirement potentially following).
 YAML remains the default and is used by all Symfony recipes, so it cannot be removed yet, but the direction is clear.
 
-![Drop XML config slide](./a-year-of-symfony-hello-symfony-8/08-drop-xml-config.png)
+![Drop XML config slide](./030-a-year-of-symfony-hello-symfony-8/08-drop-xml-config.png)
 
 The push is toward PHP as the preferred format, for concrete tooling reasons: autocompletion, static analysis, `use` statements, automated patching, and backward-compatibility friendliness.
 The fluent config builder classes introduced in Symfony 5.3 have been deprecated: they cannot represent all valid configuration shapes, and they are incompatible with Symfony Flex's automated recipe updates.
 Their replacement is YAML-like nested arrays passed to `App::config()`.
 
-![PHP slide](./a-year-of-symfony-hello-symfony-8/09-php-config.png)
+![PHP slide](./030-a-year-of-symfony-hello-symfony-8/09-php-config.png)
 
-![YAML-like arrays for config files slide](./a-year-of-symfony-hello-symfony-8/10-yaml-like-objects.png)
+![YAML-like arrays for config files slide](./030-a-year-of-symfony-hello-symfony-8/10-yaml-like-objects.png)
 
 The canonical shape for every bundle's configuration is documented in a generated `config/reference.php` file, which contains the array shapes for all installed bundles and enables IDE autocompletion and static analysis.
 It is recommended to commit this file; it can also be added to the `classmap` in `composer.json` to make the shapes available to static analysers.
 Environment-specific configuration uses a `when@{env}` key inside the array, keeping everything in one file.
 
-![Config reference slide](./a-year-of-symfony-hello-symfony-8/11-config-reference.png)
+![Config reference slide](./030-a-year-of-symfony-hello-symfony-8/11-config-reference.png)
 
 YAML is not left behind either: JSON schemas are now available for services, routes, validation, and serialization configuration files, enabling real-time validation and autocompletion in IDEs that support the `yaml-language-server` schema hint.
 An automated [XML-to-PHP conversion tool](https://github.com/GromNaN/symfony-config-xml-to-php/) is available for bundle authors migrating away from XML.
