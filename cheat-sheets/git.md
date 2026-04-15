@@ -18,16 +18,16 @@ Take a look at the [Git tips](../git/tips.md).
 ## Branches
 
 * listing existing branches: `git branch -avv`
-* creating a new branch and switching to it: `git checkout -b <branch-name>`
-* creating a branch from a remote one and track it: `git checkout -t <remote>/<branch-name>`
+* creating a new branch and switching to it: `git switch -c <branch-name>`
+* creating a branch from a remote one and track it: `git switch -t <remote>/<branch-name>`
 * pushing the branch and tracking it: `git push -u <remote> <branch-name>`
 * removing the remote branch: `git push <remote> :<branch-name>` (note the `:` before the branch name)
 * removing a local branch: `git branch -d <branch-name>` (won't remove unmerged branches)
 * removing both local and remote branches: `git branch -rd <branch-name>`
 * removing branches that doesn't exist anymore on the repository: `git fetch -p`
 * renaming a branch: `git branch -m <current-branch-name> <new-branch-name>`
-* finding unmerged branches: `git banch --no-merged`
-* switching to a branch: `git checkout <branch-name>`
+* finding unmerged branches: `git branch --no-merged`
+* switching to a branch: `git switch <branch-name>`
 
 ## Tags
 
@@ -42,7 +42,7 @@ Take a look at the [Git tips](../git/tips.md).
 ## Stashes
 
 * listing stashes: `git stash list`
-* creating a new stash: `git stash [save '<description>']`
+* creating a new stash: `git stash push [-m '<description>']`
 * applying the stash and remove it: `git stash pop <stash>`
 * removing all stashes: `git stash clear`
 * removing the stash: `git stash drop <stash>`
@@ -60,7 +60,7 @@ References: [git ready](http://gitready.com/beginner/2009/03/13/smartly-save-sta
 * listing existing remotes: `git remote -v`
 * adding one: `git remote add <remote-name> <repository-url>`
 * removing one: `git remote rm <remote-name>`
-* renaming one: `git remote  <current-remote-name> <new-remote-name>`
+* renaming one: `git remote rename <current-remote-name> <new-remote-name>`
 * showing one: `git remote show <remote-name>`
 * changing URL: `git remote set-url <remote-name> <new-repository-url>`
 
