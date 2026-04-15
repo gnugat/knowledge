@@ -43,7 +43,7 @@ A highly opinionated HTTP cheat sheet:
 * `401 UNAUTHORIZED`: authentication issue (missing or invalid credentials)
 * `403 FORBIDDEN`: authorization issue (credential found and valid, but not allowed for this resource)
 * `404 NOT FOUND`
-* `409 CONFLICT` related to the state of the resource (think Finite State Machine)
+* `409 CONFLICT` related to the state of the resource (e.g. can't checkout with uncommitted changes, can't publish an already published article, can't delete a non-empty collection)
 * `422 UNPROCESSABLE ENTITY`: error in domain (think validation) [RFC 2518 - WebDAV]
 
 ### 5xx Server error
