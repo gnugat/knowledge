@@ -28,9 +28,9 @@ Specify targeted class:
 
 Categorize tests:
 
-* `#[Small]`: unit tests (under 100ms)
-* `#[Medium]`: integration tests (under 1s)
-* `#[Large]`: end to end tests (over 1s)
+* `#[Small]`: "unit tests" fast (timeout 1s, ideally < 100ms), fully isolated, no I/O.
+* `#[Medium]`: "integration tests" (timeout 10s, ideally < 1s), moderately isolated, local I/O allowed (local DB, Redis, filesystem).
+* `#[Large]`: end to end tests (timeout 60s), external dependencies allowed
 * `#[Group('wip')]`: arbitrary categories
 
 Data providers:
