@@ -9,6 +9,7 @@
 > and gain the mindset to confidently scale PHP applications.
 
 Speaker: Paul Dragoonis
+* [Video from International PHP Conference 2026](https://www.youtube.com/watch?v=o1oGWQEOclE)
 * [Code (workshop repo)](https://github.com/dragoonis/symfonycon-2025-scaling)
 
 ## Recap
