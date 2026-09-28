@@ -8,6 +8,7 @@ A highly opinionated [Git](http://git-scm.com/) cheat sheet:
 * [Stashes](#stashes)
 * [Remotes](#remotes)
 * [Reverts](#reverts)
+* [Conflicts](#conflicts)
 
 Take a look at the [Git tips](../git/tips.md).
 
@@ -75,3 +76,28 @@ Create a new commit which undo a previous one.
 
 * reverting a commit: `git revert <commit-hash>`
 * reverting a merge: `git revert -m 1 <merge-commit-hash>`
+
+## Conflicts
+
+* resolving a `merge` conflict:
+  * keep the changes **you applied in your branch**: `git restore --ours <file>`
+  * keep the changes **from the upstream branch**: `git restore --theirs <file>`
+* resolving a `rebase` or `cherry-pick` conflict:
+  * keep the changes **you applied in your branch**: `git restore --theirs <file>`
+  * keep the changes **from the upstream branch**: `git restore --ours <file>`
+
+And after resolution, run `git add <file>; git merge|rebase|cherry-pick --continue`
+
+Here's what a conflict looks like:
+
+```
+<<<<<<< HEAD
+  what the code is now on the upstream side (e.g. `main` in a `git rebase main`)
+||||||| parent of c0ffeeee (...)
+  what the code is now on the upstream side before your commit changed it
+=======
+  what your commit c0ffeeee changes it to
+>>>>>>> c0ffeeee (...)
+```
+
+> _Note_: this is the `diff3` style, set as follow `git config --global merge.conflictStyle zdiff3`.
